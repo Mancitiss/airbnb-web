@@ -1,7 +1,19 @@
 {
-    "users":[
-        { "name": "Angy", "surname": "T." },
-        { "name": "Chris", "surname": "B." },
-        { "name": "Juliana", "surname": "Crain" }
-    ]
+  "users": [
+    {
+      "id": 0,
+      "name": "Angy",
+      "surname": "T."
+    },
+    {
+      "id": 1,
+      "name": "Chris",
+      "surname": "B."
+    },
+    {
+      "id": 2,
+      "name": "Juliana",
+      "surname": "Crain"
+    }
+  ]
 }

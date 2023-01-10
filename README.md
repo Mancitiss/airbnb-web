@@ -1,7 +1,7 @@
-# airbnb-web
+# airbnb-web  
 use  
-`npm run start`  
-to start the mock api server  
-and then use  
-`npm run web`  
-to open the main page of website  
+`npm run start` to start the mock api server  
+`npm run web` to open the main page of website  
+  
+this is just a mock database, not an entire server, please don't spam or it will die  
+if it dies, run `npm run start` again  
