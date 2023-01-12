@@ -7,9 +7,9 @@
     box-sizing: inherit;
 }
 html {
-    line-height: 1.6rem;
-    /* font-size= 10px */
     font-size: 62.5%;
+    line-height: 1.6;
+    /* font-size= 10px */
     box-sizing: border-box;
 }
 .grid {
