@@ -1,3 +1,4 @@
+
 @media only screen and (max-width: 1070px) {
     .conven,
     .review__container {
@@ -5,9 +6,6 @@
     }
     .review__text {
         height: 100px;
-    }
-    .infor__user, .score {
-        margin-bottom: 10px;
     }
 }
 @media only screen and (max-width: 780px) {
@@ -17,18 +15,9 @@
     .general__des {
         border-top: 2px solid #dddddd; 
     }
-    .gallery__item {
-        object-fit: fill;
-    }
-    .gallery__item:hover  {
-        opacity: 1;
-        cursor: default;
-    }
-    .gallery__item--b {
-        border-radius: 0;
-    }
     .task, .gallery,
-    .galllery__col--2 {
+    .galllery__col--2,
+    .reser__box {
         display: none;
     }
     .des__re {
@@ -39,32 +28,27 @@
     .detail__des {
         max-width: 100%;
     }
-    .reser__box {
-        display: none;
+    /* ---------location------- */
+    .location {
+        padding-bottom: 100px;
+    }
+    .table__location {
+        width: 100%;
     }
     .col__icon {
         padding-right: 20px;
     }
+
     /* ----------header mobile--------- */
     header {
-        display: block;
-        position: fixed;
         top: 0;
-        left: 0;
-        right: 0;
-        /* z-index: 100; */
-        /* background: var(--main-color);
-        color: #fff; */
-        background: #fff;
     }
     .header__container {
         height: 60px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         box-shadow: 0 5px 10px #ccc;
         padding: 0 30px;
     }
+
     .header__icon {
         font-size: 1.6rem;
         padding: 10px;
@@ -76,5 +60,26 @@
     }
     .header__icon--share {
         color: blue;
+    }
+
+    /* -----------footer mobile---------- */
+    footer {
+        bottom: 0;
+    }
+    .footer__container {
+        height: 100px;
+        padding: 15px;
+        box-shadow: 0px -5px 20px #ccc;
+    }
+    .infor__room {
+        flex: 2;
+    }
+    .price {
+        font-size: 1.8rem;
+        margin-bottom: 0;
+    }
+    .btn__choose--mobile {
+        flex: 1;
+        margin-top: 0;
     }
 }
