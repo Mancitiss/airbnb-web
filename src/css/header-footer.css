@@ -1,6 +1,472 @@
-.dropdown-toggle-split {
+
+body{
+        overflow-x: hidden;
+}
+section{
+        margin: 5% auto;
+        width: 100vw;
+       
+}
+/* =================HEADER============== */
+.container-search {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+}
+
+.tabs {
+        display: flex;
+        position: relative;
+        background-color: rgb(243, 241, 241);
+        border-radius: 99px;
+        height: 50px;
+}
+
+.tabs * {
+        z-index: 2;
+}
+
+input[type=radio] {
+        display: none;
+}
+
+.tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 150px;
+        font-size: 1rem;
+        font-weight: 400;
+        border-radius: 99px;
+        cursor: pointer;
+        transition: color 0.15s ease-in;
+}
+.tabs button{
+        padding: 0 20px;
+        border: none;
+        background-color: #dcbdb8;
+        color: white;
+        font-size: 1rem;
+        font-weight: 400;
+        border-radius: 99px;
+        align-items: center;
+}
+.tabs #myBtn {
+        display: none;
+}
+.tabs .search-web:hover {
+        background-color: #dcbdb8;
+        color: gray;
+}
+input[type=radio]:checked+label {
+        color: white;
+}
+
+input[id=radio-1]:checked~.glider {
+        transform: translateX(0);
+}
+
+input[id=radio-2]:checked~.glider {
+        transform: translateX(100%);
+}
+
+input[id=radio-3]:checked~.glider {
+        transform: translateX(200%);
+}
+input[id=radio-4]:checked~.glider {
+        transform: translateX(300%);
+}
+
+.glider {
+        position: absolute;
+        display: flex;
+        height: 50px;
+        width: 150px;
+        background-color: #dcbdb8;
+        z-index: 1;
+        border-radius: 99px;
+        transition: 0.25s ease-out;
+}
+#input-search{
+        display: none;
+}
+
+
+@media (max-width: 870px) {
+        .header{
+                height: 70px;
+        }
+        /* .header .logo{
+                display: none;
+        } */
+        header .split-button, .logo{
+                display: none;
+        }
+        .glider{
+                display: none;
+        }
+        .tabs label{
+                display: none;
+        }
+        .tabs .search-web{
+                display: none;
+        }
+        #input-search {
+                display: block;
+                border-radius: 20px;
+                border: 1px solid rgb(168, 167, 167);
+                padding: 0 10px ;
+                width: 80vw;
+        }
+        
+        .tabs #myBtn {
+                display: block;
+                height: 50px;
+        }
+        .tabs #myBtn:hover{
+                background-color: gray;
+        }
+        
+}
+header {
+        padding: 10px auto;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        border-bottom: 1px solid rgb(184, 183, 183);
+        position: fixed;
+        background-color: white;
+        z-index: 10;
+}
+
+.header {
+        display: flex;
+        align-items: center;
+       
+}
+.split-button{
+        display: inline-block;
+}
+
+.border-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgb(168, 167, 167);
+        border-radius: 20px;
+        width: 90px;
+        height: 40px;
+}
+.header .logo{
+        width: 90%;
+}
+
+img {
+        width: 25px;
+        height: 25px;
+        margin-left: 10px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+        /* position: absolute;
+  display: inline-block;*/
+        width: 30px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+        margin-top: 1px;
+        right: 0;
+        left: -90px;
+        display: none;
+        position: absolute;
+        background-color: white;
+        box-shadow: 2px 2px 5px 1px rgb(187, 187, 187);
+        
+        min-width: 160px;
+        z-index: 100;
+        border-radius: 10px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+}
+.dropdown-content .top{
+        font-weight: 500;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+        background-color: #ddd;
+        border-radius: 10px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+        display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+/* ===========Carousel=============== */
+.items {
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: auto 5%;
+}
+
+.items .cover {
+        width: 350px;
+        height: 270px;
+        margin: 15px 0;
+}
+.items img {
+        width: 200px;
+        height: 200px;
+        margin: 10px auto;
+        border-radius: 10px;
+}
+.items p{
+        width: 350px;
+        text-align: center;
+        font-weight: bold;
+        margin: 10px auto;
+}
+.cam-nang img{
+        width: 350px;
+        height: 200px;
+        margin: 15px auto; 
+        border-radius: 5px;    
+}
+.cam-nang {
+      padding: 50px;
+}
+.slick-arrow{
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        border: 1px solid #FF884B;
+        background-color: white;
+        border-radius: 20px;
+}
+.slick-prev {
+        left: 0;
+        z-index: 2;
 
 }
-.btn {
-        border-radius: 50%;
+.slick-next {
+        right: 0;   
+        z-index: 2;
 }
+.slick-dots {
+        display: none !important;       
+}
+.slick-dots button {
+        font-size: 0px;
+        border: none;
+} 
+@media (min-width: 1200px) {
+        .items .cover {
+                width: 300px;
+                height: 270px;
+                margin: 15px 0;
+        }
+        .cam-nang img {
+                width: 300px;
+                height: 200px;
+                margin: 15px auto;
+                border-radius: 5px;
+        }
+        .items p {
+                width: 300px;
+                margin: 10px auto;
+        }
+        
+                
+}
+@media (max-width: 900px) {
+        .items .cover {
+                width: 250px;
+                height: 270px;
+                margin: 15px 0;
+        }
+
+        .cam-nang img {
+                width: 250px;
+                height: 200px;
+                margin: 15px auto;
+                border-radius: 5px;
+        }
+
+        .items p {
+                width: 250px;
+                margin: 10px auto;
+        }
+
+
+}
+@media (max-width: 690px) {
+        .items .cover {
+                width: 200px;
+                height: 270px;
+                margin: 15px 0;
+        }
+
+        .cam-nang img {
+                width: 200px;
+                height: 200px;
+                margin: 15px auto;
+                border-radius: 5px;
+        }
+
+        .items p {
+                width: 200px;
+                margin: 10px auto;
+        }
+
+
+}
+@media (max-width: 560px) {
+        .items .cover {
+                width: 250px;
+                height: 270px;
+                margin: 15px 0;
+        }
+
+        .cam-nang img {
+                width: 250px;
+                height: 200px;
+                margin: 15px auto;
+                border-radius: 5px;
+        }
+
+        .items p {
+                width: 250px;
+                margin: 10px auto;
+        }
+       
+
+
+}
+
+/* =======================FOOTER============= */
+footer {
+        position: absolute;
+        width: 100vw;;
+}
+
+.site-footer {
+        background-color: #000000;
+        padding: 45px 0 20px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #737373;
+}
+
+.site-footer .col-sm-12 {
+        padding: 0 10%;
+}
+
+.site-footer img {
+        width: 120px;
+        height: 120px;
+        margin-left: -3%;
+}
+
+.site-footer .partner_logo {
+        width: 100px;
+        height: 50px;
+        margin: 5PX 10px;
+        border-radius: 5px;
+}
+
+.site-footer hr {
+        border-top-color: #bbb;
+        opacity: 0.5
+}
+
+.site-footer hr.small {
+        margin: 20px 0
+}
+
+.site-footer h6 {
+        color: #dcbdb8;
+        font-size: 15px;
+
+        margin-top: 5px;
+
+}
+
+.site-footer a {
+        color: white;
+        text-decoration: none;
+        line-height: 30px;
+        font-size: 11px;
+
+}
+
+.site-footer a:hover {
+        color: #3366cc;
+        text-decoration: none;
+}
+
+.footer-links {
+        padding-left: 0;
+        list-style: none
+}
+
+.footer-links li {
+        display: block
+}
+
+.footer-links a {
+        color: white;
+        margin-left: 5px;
+}
+
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+        color: #3366cc;
+        text-decoration: none;
+}
+
+.footer-links.inline li {
+        display: inline-block
+}
+
+.copyright-text {
+        justify-content: center;
+        align-items: center;
+}
+
+@media (max-width:991px) {
+        .site-footer [class^=col-] {
+                margin-bottom: 30px
+        }
+}
+
+@media (max-width:767px) {
+        .site-footer {
+                padding-bottom: 0
+        }
+
+        .site-footer .copyright-text,
+        .site-footer .social-icons {
+                text-align: center
+        }
+}
+
+
