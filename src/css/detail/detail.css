@@ -1,6 +1,6 @@
 body {
     font-size: 1.6rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif !important;
 }
 .body {
     padding: 20px;
@@ -15,6 +15,9 @@ body {
 .txtline__bold {
     text-decoration: underline; 
     font-weight: 600;
+}
+h2, h3, h4, h5 {
+    font-weight: 700;
 }
 /* --------------------head----------------------- */
 .general__task {
@@ -46,9 +49,14 @@ body {
 }
 
 /* --------------------GALLERY--------------------- */
-
+#gallery__res {
+    height: 500px;
+    /* width: 100vw; */
+    display: none;
+}
 .gallery {
     display: flex;
+    overflow: hidden;
 }
 .galllery__col--1 {
     height: 414px;
@@ -81,6 +89,9 @@ body {
 }
 .gallery__item--s--1{
     border-top-right-radius: 10px;
+}
+.gallery__item--s--2 {
+    margin: 7px 0;
 }
 .gallery__item--s--3 {
     border-bottom-right-radius: 10px;
@@ -130,6 +141,8 @@ body {
 }
 .detail__text {
     text-align: justify;
+    font-size: 1.4rem;
+    line-height: 1.6;
 }
 .conven {
     column-count: 2;
@@ -141,6 +154,7 @@ body {
 }
 .conven__item span{
     flex: 4;
+    font-size: 1.4rem;
 }
 .conven__item i {
     flex: 1;
@@ -157,7 +171,6 @@ body {
     margin-top: 20px;
 }
 .review__item {
-    margin-top: 30px;
     margin-bottom: 10px;
     
 }
@@ -181,22 +194,29 @@ body {
 .username {
     margin-left: 10px;
 }
+.username h4{
+    font-weight: 700;
+    font-size: 1.5rem
+}
+.username h5 {
+    font-size: 1.3rem;
+}
 .review__text {
     height: 120px;
 }
 .review__text p {
     font-size: 1.4rem;
+    line-height: 1.5;
     text-align: justify;
     margin-right: 30px;
 }
 .btn__morerv {
     margin-top: 20px;
     padding: 20px 70px;
-    color: #fff;
+    color: #fff !important;
     background: var(--main-color);
     border-radius: 8px;
 }
-
 /* ----------------location---------------- */
 .location {
     padding-top: 40px;
@@ -232,10 +252,12 @@ body {
     margin-bottom: 10px;
 }
 .table__infor {
+    border-collapse: unset !important;
     border-radius: var(--radius-reser);   
     border: 1px solid var(--border-grey);
 }
 .table__infor td {
+    font-size: 1.3rem;
     padding: 20px;
 }
 .table__infor b {
@@ -251,7 +273,7 @@ body {
     margin: 0;
 }
 .cell {
-    position: relative;
+    line-height: 1.7 !important;
 }
 .cell--checkin {
     border-top-left-radius: var(--radius-reser); 
@@ -286,7 +308,7 @@ body {
     display: none;
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     width: 120%;
     padding: 20px 10px;
     background: #fff;
@@ -301,10 +323,11 @@ body {
 
 .table__room th {
     padding-bottom: 10px;
+    font-size: 1.4rem;
 }
 .table__room td {
     padding: 10px 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     border-bottom: 1px solid black;
 }
 .icon__adjust {
@@ -327,6 +350,9 @@ body {
 }
 .show__block {
     display: block;
+}
+.rotate {
+    transform: translateY(-50%) rotate(180deg);
 }
 /* ---------------mobile----------- */
 header, footer {

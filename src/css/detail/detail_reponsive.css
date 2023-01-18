@@ -10,7 +10,14 @@
 }
 @media only screen and (max-width: 780px) {
     .head__title {
-        /* transform: translateY(460px); */
+        transform: translateY(520px);
+    }
+    .head__title h3{
+        font-size: 20px;
+    }
+    #gallery__res {
+        height: 450px;
+        display: block;
     }
     .general__des {
         border-top: 2px solid #dddddd; 
@@ -21,12 +28,16 @@
         display: none;
     }
     .des__re {
+        margin-top: 80px;
         margin-right: 0;
     }
     .room__des, 
     .review, 
     .detail__des {
         max-width: 100%;
+    }
+    .review__text p {
+        margin-right: 0;
     }
     /* ---------location------- */
     .location {
@@ -82,4 +93,17 @@
         flex: 1;
         margin-top: 0;
     }
+}
+@media (max-width: 610px) {
+    .head__title {
+        transform: translateY(400px);
+    }
+    .des__re {
+        margin-top: 0px;
+        margin-right: 0;
+    }
+    .general__task {
+        margin-bottom: 0;
+    }
+    
 }

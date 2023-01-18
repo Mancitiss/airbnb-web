@@ -7,11 +7,15 @@
     <link rel="icon" href="../../assets/imgs/Logo (trắng).png" type="image/x-icon" />
     <title>Chang's Tropical Corner</title>
 
+    <!-------- BOOTSTRAP CSS ------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
     <!---------- CSS----------->
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/detail/detail.css">
     <link rel="stylesheet" href="../../css/detail/detail_reponsive.css">
+    <link rel="stylesheet" href="../../css/detail/gallery.css">
+    <link rel="stylesheet" href="../../css/base.css">
 
     <!-----------THEMIFY ICON--------------->
     <link rel="stylesheet" href="../../assets/fonts-icon/themify-icons-font/themify-icons.css">
@@ -22,16 +26,26 @@
     <!----------- GOOGLE FONTS ----------->
     <style> @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap'); </style>
 
-    <!------------ jQuery --------------->
+    <!------------ JQUERY --------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    
+
+    <!------ JQUERY LIBRARY BOOTSTRAP ------>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-----/------>
+
+    <!------- OWL CAROUSEL CSS ------>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <!-----------------ALL DEVICES--------------->
     <div class="grid body">
         <!-------------head------------------>
         <div class="head__title">
-            <h2>Chang's Tropical Corner ☀ REFRESH SEAVIEW MUI NE</h2>
-            <h4>Thành phố Phan Thiết, Bình Thuận, Việt Nam</h4>
+            <h3>Chang's Tropical Corner ☀ REFRESH SEAVIEW MUI NE</h3>
+            <h5>Thành phố Phan Thiết, Bình Thuận, Việt Nam</h5>
             <div class = "general__task">
                 <span> <i class="fa-solid fa-star icon"></i>4.8 &nbsp - &nbsp <span class="txtline__bold"> 168 lượt đánh giá</span></span>
                 <div class="task">
@@ -48,27 +62,29 @@
         </div>
     
         <!-------------gallery--------------->
+        <!-- PC -->
         <div class="gallery">
             <div class="galllery__col galllery__col--1">
-                <a href="" class="gallery__item--link">
+                <a target="_blank" href="https://a0.muscache.com/im/pictures/miso/Hosting-639439314907086295/original/3b3c6298-bf4d-49a6-bd93-205e1b99fee9.jpeg?im_w=1200" class="gallery__item--link">
                     <img class="gallery__item gallery__item--b" src="https://a0.muscache.com/im/pictures/miso/Hosting-639439314907086295/original/3b3c6298-bf4d-49a6-bd93-205e1b99fee9.jpeg?im_w=1200" alt="hinh-anh-khach-san">
                 </a>
             </div>
             <div class="galllery__col galllery__col--2">
-                <a href="">
+                <a target="_blank" href="https://a0.muscache.com/im/pictures/cf4f406e-4dd3-4977-bc5d-2690fb6154f5.jpg?im_w=720">
                     <img class="gallery__item gallery__item--s gallery__item--s--1" src="https://a0.muscache.com/im/pictures/cf4f406e-4dd3-4977-bc5d-2690fb6154f5.jpg?im_w=720" alt="hinh-anh-khach-san">
 
                 </a>
-                <a href="">
-                    <img class="gallery__item gallery__item--s" src="https://a0.muscache.com/im/pictures/9e96aa88-cbfb-4e63-9f1b-69b0254a7561.jpg?im_w=1200" alt="hinh-anh-khach-san">
+                <a target="_blank" href="https://a0.muscache.com/im/pictures/9e96aa88-cbfb-4e63-9f1b-69b0254a7561.jpg?im_w=1200">
+                    <img class="gallery__item gallery__item--s gallery__item--s--2" src="https://a0.muscache.com/im/pictures/9e96aa88-cbfb-4e63-9f1b-69b0254a7561.jpg?im_w=1200" alt="hinh-anh-khach-san">
                 </a>
                 <div style="height: inherit; position: relative;">
                     <img class="gallery__item gallery__item--s gallery__item--s--3" src="https://a0.muscache.com/im/pictures/c69235e2-5cd4-48ab-860d-49aca384d89d.jpg?im_w=720" alt="hinh-anh-khach-san">
-                    <div class="overlay overlay__moreimg">Hiển thị thêm hình ảnh</div>
+                    <div class="overlay overlay__moreimg" data-toggle="modal" data-target="#modal">Hiển thị thêm hình ảnh</div>
                 </div>
             </div>
         </div>
-
+        <!-- Resposive -->
+        <div id="gallery__res"></div>
     
         <!-----------------2 cols------------------->
         <div style="display: flex; justify-content: space-between">
@@ -125,7 +141,7 @@
             
                 <!-------------review---------------->
                 <div class="review">
-                    <h3 style="padding-top: 40px">Đánh giá</h3>
+                    <h3 style="padding-top: 40px; margin-top: 0;">Đánh giá</h3>
                     <span> <i class="fa-solid fa-star icon"></i>4.8 &nbsp - &nbsp <span class="txtline__bold"> 168 lượt đánh giá</span></span>
                     <div class="review__container">
             
@@ -135,7 +151,7 @@
                                 <img src="https://image.thanhnien.vn/460x587/Uploaded/2023/zxaijr/2022_12_10/saothailanbaifernbitrieutap13-5733.png" alt="avatar" class="review__img">
                                 <div class="username">
                                     <h4 style="margin:0">Lê Phương</h4>
-                                    <h5 style="margin:0">10 OCT 2022</h5>
+                                    <h5>10 OCT 2022</h5>
                                     
                                 </div>
                             </div>
@@ -153,7 +169,7 @@
                                 <img src="https://hiamdory.files.wordpress.com/2022/11/image-31.png?w=865" alt="avatar" class="review__img">
                                 <div class="username">
                                     <h4 style="margin:0">Trang</h4>
-                                    <h5 style="margin:0">07 NOV 2022</h5>
+                                    <h5>07 NOV 2022</h5>
                                 </div>
                             </div>
                             <p class="score"> <i class="fa-solid fa-star icon"></i>5 </p> 
@@ -170,7 +186,7 @@
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj0ZO3YYtsVeboTftmgFs5QqWG2BmxZezr5g&usqp=CAU" alt="avatar" class="review__img">
                                 <div class="username">
                                     <h4 style="margin:0">Huỳnh Khôi</h4>
-                                    <h5 style="margin:0">02 DEC 2022</h5>
+                                    <h5>02 DEC 2022</h5>
                                 </div>
                             </div>
                             <p class="score"> <i class="fa-solid fa-star icon"></i>5 </p> 
@@ -187,7 +203,7 @@
                                 <img src="https://thumbs.dreamstime.com/b/portrait-friendly-young-man-inside-trendy-handsome-guy-looks-to-camera-smiling-wishing-everyone-us-worry-enjoy-112348414.jpg" alt="avatar" class="review__img">
                                 <div class="username">
                                     <h4 style="margin:0">Mạnh Nguyễn</h4>
-                                    <h5 style="margin:0">27 DEC 2022</h5>
+                                    <h5>27 DEC 2022</h5>
                                 </div>
                             </div>
                             <p class="score"> <i class="fa-solid fa-star icon"></i>5 </p> 
@@ -204,7 +220,7 @@
                                 <img src="https://i.pinimg.com/originals/11/69/e1/1169e1aa3cb72f45a71c3286d6791c93.jpg" alt="avatar" class="review__img">
                                 <div class="username">
                                     <h4 style="margin:0">Mỹ Anh</h4>
-                                    <h5 style="margin:0">08 DEC 2022</h5>
+                                    <h5>08 DEC 2022</h5>
                                 </div>
                             </div>
                             <p class="score"> <i class="fa-solid fa-star icon"></i>3 </p> 
@@ -222,7 +238,7 @@
                                 <img src="https://vcdn1-giaitri.vnecdn.net/2021/09/01/die-n-vie-n-bua-nalinthipremini20210831143824851-jpg_1630499989-1630499999-1630500016.jpg?w=900&h=540&q=100&dpr=1&fit=crop&s=wzwXJrc2TUfQjcDaI-x0gw" alt="avatar" class="review__img">
                                 <div class="username">
                                     <h4 style="margin:0">An Nhiên</h4>
-                                    <h5 style="margin:0">27 DEC 2022</h5>
+                                    <h5>27 DEC 2022</h5>
                                 </div>
                             </div>
                             <p class="score"> <i class="fa-solid fa-star icon"></i>4 </p> 
@@ -261,22 +277,22 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" class="cell cell--guest">
+                        <td colspan="2" class="cell cell--room">
                             <div class="cell__container cell__container--room">
                                 <div style="padding-right: 20px;">
                                     <b>LOẠI PHÒNG</b> <br>
-                                    <span>(Phòng 1-2ng SL:3), (Phòng 5-6ng SL:1), (Phòng 9-10ng SL:1),...</span> 
+                                    <span>Nhấn để chọn số lượng phòng</span> 
                                 </div>
                                 <i class="ti-angle-down icon__drop"></i>
         
                             </div>
-                            <div class="sub__cell sub__cell--guest">
+                            <div class="sub__cell">
                                 <table cellspacing="0" class="table__room">
                               
                                         <th>Loại phòng</th>
                                         <th>Số lượng</th>
                                         <th>Giá / đêm</th>
-
+                                        <th>Còn</th>
                                         <tr>
                                             <td>1 - 2 người</td>
                                             <td>
@@ -287,6 +303,7 @@
                                                 </div>
                                             </td>
                                             <td>2.190.000 VND</td>
+                                            <td><span class="left">10</span><span>&nbspphòng</span></td>
                                         </tr>
                                         <tr>
                                             <td>3 - 4 người</td>
@@ -298,6 +315,7 @@
                                                 </div>
                                             </td>
                                             <td>2.800.000 VND</td>
+                                            <td><span class="left">0</span> <span>&nbspphòng</span></td>
                                         </tr>
                                         <tr>
                                             <td>5 - 6 người</td>
@@ -309,6 +327,7 @@
                                                 </div>
                                             </td>
                                             <td>3.400.000 VND</td>
+                                            <td><span class="left">2</span> <span>&nbspphòng</span></td>
                                         </tr>
                                         <tr>
                                             <td>7 - 8 người</td>
@@ -320,6 +339,7 @@
                                                 </div>
                                             </td>
                                             <td>4.000.000 VND</td>
+                                            <td><span class="left">7</span> <span>&nbspphòng</span></td>
                                         </tr>
                                         <tr>
                                             <td style="border: none; padding-bottom: 0;">9 - 10 người</td>
@@ -331,8 +351,8 @@
                                                 </div>
                                             </td>
                                             <td style="border: none; padding-bottom: 0;">4.500.000 VND</td>
+                                            <td style="border: none; padding-bottom: 0;"><span class="left">15</span> <span>&nbspphòng</span></td>
                                         </tr>
-                         
                                 </table>
                                 
                             </div>
@@ -428,82 +448,112 @@
         </div>
     </footer>
     <!--------------END MOBILE---------------->
-
     
+
+    <div id="listimg" ></div>
     <script>
+        // hide sub cell when reload page
         $(window).on('beforeunload', function(){
-            $('.sub__cell--guest').removeClass("show__block");
-            $('.sub__cell--room').removeClass("show__block");
+            $('.sub__cell').removeClass("show__block");
         });
 
         $(document).ready(function() {
             // ------EVENT RESERVATION BOX-----
-            function appear(selector1, selector2) {
-                selector1.toggleClass("show__block");
-                selector2.removeClass("show__block");
-            }
-
-            $('.cell--guest').click(function() {
-                appear($('.sub__cell--guest'),  $('.sub__cell--room'));
-            });
             $('.cell--room').click(function() {
-                appear($('.sub__cell--room'), $('.sub__cell--guest'));
+                $('.sub__cell').toggleClass("show__block");
+                $('.icon__drop').toggleClass("rotate");
             });
-    
             // stopPropagation
-            $('.sub__cell--room').click(function(e) {
+            $('.sub__cell').click(function(e) {
                 e.stopPropagation();
             });
-            $('.sub__cell--guest').click(function(e) {
-                e.stopPropagation();
-            }) 
         
             //---------- PLUS MINUS QUANTITY
-
-            // icon plus event
-            $('.icon__adjust--plus').mouseup(function() {
-                current = parseInt($(this).prev().text());
-                if(current < 8) {
-                    current++;
-                    $(this).prev().text('0' + current);
-                    $(this).prev().prev().css({"opacity":"1", "cursor":"pointer" });
-                    if(current == 8) {
-                        $(this).css({"opacity":"0.2", "cursor":"no-drop" });
-                    }
-                }            
-            });
-            $('.icon__adjust--plus').hover(function() {
-                current = parseInt($(this).prev().text());
-                if (current < 8) {
-                    $(this).css({"border-color": "black", "color":"black"});
+            // set css for room type full
+            $('.left').each(function() {
+                if (parseInt($(this).text()) < 1) {
+                    tr = $(this).parents('.table__room tr');
+                    tr.css({"opacity":"0.5", "text-decoration":"line-through"});
+                    td = jQuery(tr).find("td:eq(1)"); 
+                    td.children().children().eq(2).css({"opacity":"0.2", "cursor":"no-drop"});     
                 }
-            }, function() {
-                $(this).css({"border-color": "grey", "color":"grey"});
+            });
+            
+            // get last td
+            function findLeftTd(element) {
+                tr = element.parents('.table__room tr'); // tr which icon plus belong to
+                td = jQuery(tr).find("td:eq(3)"); // last td of tr
+                left = parseInt(td.children().first().text()); // text of td
+                return left;
+            }
+            
+            // add 0 if num < 10, else remove
+            function changeNumber(number) {
+                if (number < 10) 
+                    return '0' + number;
+                else 
+                    return number;
+            }
+            
+            // icon plus event
+            $('.icon__adjust--plus').on({
+                mouseup: function(){
+                    current = parseInt($(this).prev().text());
+                    left = findLeftTd($(this));
+                    if(current < left) {
+                        current++;
+                        $(this).prev().text(changeNumber(current));
+                        $(this).prev().prev().css({"opacity":"1", "cursor":"pointer" });
+                        if(current == left) {
+                            $(this).css({"opacity":"0.2", "cursor":"no-drop" });
+                        }
+                    }    
+                },
+                mouseover: function(){
+                    current = parseInt($(this).prev().text());
+                    left = findLeftTd($(this));
+                    if (current < left) {
+                        $(this).css({"border-color": "black", "color":"black", "font-weight":"800"});
+                    }
+                },
+                mouseleave: function() {
+                    $(this).css({"border-color": "grey", "color":"grey"});
+                },    
             });
 
             // icon minus event
-            $('.icon__adjust--minus').mouseup(function() {
-                current = parseInt($(this).next().text());
-                if(current > 0) {
-                    current--;
-                    $(this).next().text('0' + current);
-                    $(this).next().next().css({"opacity":"1", "cursor":"pointer" });
-                    if (current == 0) {
-                        $(this).next().text(0);
-                        $(this).css({"opacity":"0.2", "cursor":"no-drop" });
+            $('.icon__adjust--minus').on({
+                mouseup: function(){
+                    current = parseInt($(this).next().text());
+                    if(current > 0) {
+                        current--;
+                        $(this).next().text(changeNumber(current));
+                        $(this).next().next().css({"opacity":"1", "cursor":"pointer" });
+                        if (current == 0) {
+                            $(this).next().text(0);
+                            $(this).css({"opacity":"0.2", "cursor":"no-drop" });
+                        }
                     }
-                }
-    
-            });
-            $('.icon__adjust--minus').hover(function() {
-                current = parseInt($(this).next().text());
-                if (current > 0) {
-                    $(this).css({"border-color": "black", "color":"black"});
-                }
-            }, function() {
-                $(this).css({"border-color": "grey", "color":"grey"});
+                },
+                mouseover: function(){
+                    current = parseInt($(this).next().text());
+                    left = findLeftTd($(this));
+                    if (current > 0) {
+                        $(this).css({"border-color": "black", "color":"black", "font-weight":"800"});
+                    }
+                },
+                mouseleave: function() {
+                    $(this).css({"border-color": "grey", "color":"grey"});
+                },    
             });
         });
     </script>
+    <script>
+        $(document).ready(function() {
+            $("#listimg").load("gallery_modal.html");
+            $("#gallery__res").load("gallery.html");
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
