@@ -28,39 +28,99 @@
             <!-- SEARCH TAB -->
             <div class="container_search">
                 <div class="tabs_search">
-                    <input type="radio" id="radio-1" name="tabs_search" checked onclick="openCity(event, 'place')"/>
                     <div class="tabs_small">
                         <label class="tab_search" for="radio-1">Địa điểm</label>
-                        <input type="text" id="text_place" placeholder="Tìm kiếm địa điểm" name="tabs_search" />
+                        <input type="text" id="text_place" placeholder="Nhập tên tỉnh thành" name="tabs_search" />
                     </div>
 
-                    <input type="radio" id="radio-2" name="tabs_search" />
                     <div class="tabs_small">
                         <label class="tab_search" for="radio-2">Nhận phòng</label>
-                        <input type="date" id="text_place" placeholder="dd/mm/yyyy" name="tabs_search" />
+                        <input type="date" id="text_place" placeholder="dd/mm/yyyy" name="tabs_search" style="color:gray;"/>
                     </div>
 
-                    <input type="radio" id="radio-3" name="tabs_search" />
                     <div class="tabs_small">
                         <label class="tab_search" for="radio-3" onclick="openCity(event, 'check_out')">Trả phòng</label>
-                        <input type="date" id="text_place" placeholder="dd/mm/yyyy" name="tabs_search" />
+                        <input type="date" id="text_place" placeholder="dd/mm/yyyy" name="tabs_search"  style="color:gray;"/>
                     </div>
                     
-                    <input type="radio" id="radio-4" name="tabs_search" />
                     <div class="tabs_small">
-                        <label class="tab_search" for="radio-4" onclick="openCity(event, 'type_room')">Loại phòng<i class="fa-solid fa-chevron-down"></i></label>                        
-                        <input type="text" id="text_place" placeholder="Tùy chọn" name="tabs_search" />
+                        <label class="tab_search" for="radio-4">
+                            <div class="dropdown" style="margin-top: 10%;">
+                                <button onclick="hamDropdown()" class="nut_dropdown">
+                                    <span>Loại phòng</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <div class="noidung_dropdown">
+                                    <table>
+                                        <thead style="text-align: center; font-weight: 600; color: #dcbdb8;">
+                                            <td>Loại phòng</td>
+                                            <td>Số lượng</td>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1-2 người</td>
+                                                <td style="display: flex; width: 5px;">
+                                                    <button id="btn_decrease" onclick="stepper(this)">-</button>
+                                                    <input type="number" name="numberupdown" id="amount_guess1" min="0" max="10" step="1" value="2"
+                                                        readonly>
+                                                    <button id="btn_increase" onclick="stepper(this)">+</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3-4 người</td>
+                                                <td style="display: flex; width: 5px;">
+                                                    <button id="btn_decrease" onclick="stepper(this)">-</button>
+                                                    <input type="number" name="numberupdown" id="amount_guess2" min="0" max="10" step="1" value="2"
+                                                        readonly>
+                                                    <button id="btn_increase" onclick="stepper(this)">+</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5-6 người</td>
+                                                <td style="display: flex; width: 5px;">
+                                                    <button id="btn_decrease" onclick="stepper(this)">-</button>
+                                                    <input type="number" name="numberupdown" id="amount_guess3" min="0" max="10" step="1" value="2"
+                                                        readonly>
+                                                    <button id="btn_increase" onclick="stepper(this)">+</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>7-8 người</td>
+                                                <td style="display: flex; width: 5px;">
+                                                    <button id="btn_decrease" onclick="stepper(this)">-</button>
+                                                    <input type="number" name="numberupdown" id="amount_guess4" min="0" max="10" step="1" value="2"
+                                                        readonly>
+                                                    <button id="btn_increase" onclick="stepper(this)">+</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>9-10 người</td>
+                                                <td style="display: flex; width: 5px;">
+                                                    <button id="btn_decrease" onclick="stepper(this)">-</button>
+                                                    <input type="number" name="numberupdown" id="amount_guess5" min="0" max="10" step="1" value="2"
+                                                        readonly>
+                                                    <button id="btn_increase" onclick="stepper(this)">+</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                        </label>                        
+                        <!-- <input type="text" id="text_place" placeholder="Tùy chọn" name="tabs_search" /> -->
                     </div>
                     
                     <input type="text" placeholder="Tìm kiếm" id="input-search" name="tabs_search"/>
                     <button class="search-web">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
-                    <button id="myBtn"><i class="fa-solid fa-sliders"></i></button>
-                    <span class="glider"></span>
+
                 </div>
             </div>
 
+           
+            <!-- sliding tab -->
            
 
 
@@ -88,121 +148,51 @@
         </div>
     </header>
 
-    <div class="big_tabcontent">
-        <div id="place" class="tabcontent">
-            <span class="close">
-                <i class="close1 fa-solid fa-xmark"></i>
-            </span>
-            <h5>Chọn theo vùng miền</h5>
-            <div class="content_tab">
-                <!-- create list of checkbox'city in VietNam-->
-                <div class="city">
-                    <input type="radio" id="city1" name="city" value="Miền Bắc">
-                    <label for="city1">Miền Bắc</label>
+
+    
+    
+
+
+    <!-- create navigation bottom -->
+    <div class="nav_bottom">
+        <div class="navigation">
+            <div class="nav_bar">
+                <div class="nav-item">
+                    <a href="#">
+                        <button>
+                            <i class="fa-solid fa-home"></i>
+                        </button>
+                    </a>
                 </div>
-                <div class="city">
-                    <input type="radio" id="city2" name="city" value="Miền Nam">
-                    <label for="city2">Miền Nam</label>
+                <div class="nav-item">
+                    <a href="../html/Search_page.html">
+                        <button>
+                            <i class="fa-solid fa-search"></i>
+                        </button>
+                    </a>
                 </div>
-                <div class="city">
-                    <input type="radio" id="city3" name="city" value="Miền Trung">
-                    <label for="city3">Miền Trung</label>
+                <div class="nav-item">
+                    <a href="#">
+                        <button>
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </a>
                 </div>
-                <div class="city">
-                    <input type="radio" id="city4" name="city" value="Miền Tây">
-                    <label for="city4">Miền Tây</label>
+                <div class="nav-item">
+                    <a href="#">
+                        <button>
+                            <i class="fa-regular fa-user"></i>
+                        </button>
+                        
+                    </a>
                 </div>
             </div>
-        </div>
-    
-        <div id="type_room" class="tabcontent">
-            <span class="close">
-                <i class="close2 fa-solid fa-xmark"></i>
-            </span>
-            <table>
-                <thead style="text-align: center; font-weight: 600;">
-                    <td>Loại phòng</td>
-                    <td>Số lượng</td>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1-2 người</td>
-                        <td style="display: flex; width: 5px;">
-                            <button id="btn_decrease" onclick="stepper(this)">-</button>
-                            <input type="number" name="numberupdown" id="amount_guess1" min="0" max="10" step="1" value="2" readonly>
-                            <button id="btn_increase" onclick="stepper(this)">+</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3-4 người</td>
-                        <td style="display: flex; width: 5px;">
-                            <button id="btn_decrease" onclick="stepper(this)">-</button>
-                            <input type="number" name="numberupdown" id="amount_guess2" min="0" max="10" step="1" value="2" readonly>
-                            <button id="btn_increase" onclick="stepper(this)">+</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5-6 người</td>
-                        <td style="display: flex; width: 5px;">
-                            <button id="btn_decrease" onclick="stepper(this)">-</button>
-                            <input type="number" name="numberupdown" id="amount_guess3" min="0" max="10" step="1" value="2" readonly>
-                            <button id="btn_increase" onclick="stepper(this)">+</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>7-8 người</td>
-                        <td style="display: flex; width: 5px;">
-                            <button id="btn_decrease" onclick="stepper(this)">-</button>
-                            <input type="number" name="numberupdown" id="amount_guess4" min="0" max="10" step="1" value="2" readonly>
-                            <button id="btn_increase" onclick="stepper(this)">+</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>9-10 người</td>
-                        <td style="display: flex; width: 5px;">
-                            <button id="btn_decrease" onclick="stepper(this)">-</button>
-                            <input type="number" name="numberupdown" id="amount_guess5" min="0" max="10" step="1" value="2" readonly>
-                            <button id="btn_increase" onclick="stepper(this)">+</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
     </div>
     
 
-    
-
     <script>
-        //open tabcontent when click tab_search
-        function openCity(evt, feature) {
-            var i, tabcontent, tab_search;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tab_search = document.getElementsByClassName("tab_search");
-            for (i = 0; i < tab_search.length; i++) {
-                tab_search[i].className = tab_search[i].className.replace(" active", "");
-            }
-            document.getElementById(feature).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
 
-
-      //close tabcontent when click close button
-        var close1 = document.getElementsByClassName("close1")[0];
-        var close2 = document.getElementsByClassName("close2")[0];
-        var place = document.getElementById("place");
-        var type_room = document.getElementById("type_room");
-        close1.onclick = function() {
-            place.style.display = "none";
-        }
-        close2.onclick = function() {
-            type_room.style.display = "none";
-        }
-
-  
         //increase and decrease number of guest with maximum 10 people and minimum 0 people
         function stepper(btn) {
             var input = btn.parentNode.querySelector('input[type=number]');
@@ -221,8 +211,13 @@
         }
         
         
+        // open noidung when click on button nut_dropdown
+         function hamDropdown() {
+                document.querySelector(".noidung_dropdown").classList.toggle("hienThi");
+            }
 
     </script>
+
 
 </body>
 </html>

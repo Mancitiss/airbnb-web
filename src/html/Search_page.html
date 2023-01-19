@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm kiếm</title>
+    <link rel="stylesheet" href="../css/search-page.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/c89546c2fd.js" crossorigin="anonymous"></script>
+
+    <script src="../js/dropdown_searchpage.js"></script>
+</head>
+<body>
+
+    <div class="cover_dropdown">
+        <div class="tab_open"  onclick="openCity(event, 'place')">
+            <label class="tab_search" for="radio-4">
+                Địa điểm
+                <i class="fa-solid fa-chevron-down"></i>
+            </label>
+        </div>
+        <div id="place" class="tabcontent">
+            <span class="close">
+                <i class="fa-solid fa-xmark"></i>
+            </span>
+            <div class="input_search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input class="text_search" type="text" placeholder="Nhập tên tỉnh thành"></input>
+                
+            </div>
+        
+        </div>
+    </div>
+    
+
+
+    <div class="cover_dropdown">
+        <div class="tab_open" onclick="openCity(event, 'type_time')">
+    
+            <label class="tab_search" for="radio-4">
+                Thời gian
+                <i class="fa-solid fa-chevron-down"></i>
+            </label>
+        </div>
+        <div id="type_time" class="tabcontent">
+            <span class="close">
+                <i class="fa-solid fa-xmark"></i>
+            </span>
+            <div class="cover_date" style="display: flex;">
+                <div class="datebook checkin">
+                    <h4>Ngày nhận phòng</h4>
+                    <input type="date" name="" id="checkin_date" placeholder="dd/mm/yyyy">
+                </div>
+                
+                <div class="datebook checkout">
+                    <h4>Ngày trả phòng</h4>
+                    <input type="date" name="" id="checkout_date" placeholder="dd/mm/yyyy">
+                </div>
+            </div>
+            
+            
+        </div>
+    
+    </div>
+    
+
+    <div class="cover_dropdown">
+        <div class="tab_open"  onclick="openCity(event, 'type_room')">
+        
+            <label class="tab_search" for="radio-4">
+                Loại phòng
+                <i class="fa-solid fa-chevron-down"></i>
+            </label>
+        </div>
+        <div id="type_room" class="tabcontent">
+            <span class="close">
+                <i class="fa-solid fa-xmark"></i>
+            </span>
+            <table>
+                <thead style="text-align: center; font-weight: 600; color: #dcbdb8;" >
+                    <td style="padding: 0 20px 20px 0;">Loại phòng</td>
+                    <td style="padding: 0 0 20px 30px;">Số lượng</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 - 2 người</td>
+                        <td style="display: flex; width: 5px;">
+                            <button id="btn_decrease" onclick="stepper(this)">-</button>
+                            <input type="number" name="numberupdown" id="amount_guess1" min="0" max="10" step="1" value="2"
+                                readonly>
+                            <button id="btn_increase" onclick="stepper(this)">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3 - 4 người</td>
+                        <td style="display: flex; width: 5px;">
+                            <button id="btn_decrease" onclick="stepper(this)">-</button>
+                            <input type="number" name="numberupdown" id="amount_guess2" min="0" max="10" step="1" value="2"
+                                readonly>
+                            <button id="btn_increase" onclick="stepper(this)">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5 - 6 người</td>
+                        <td style="display: flex; width: 5px;">
+                            <button id="btn_decrease" onclick="stepper(this)">-</button>
+                            <input type="number" name="numberupdown" id="amount_guess3" min="0" max="10" step="1" value="2"
+                                readonly>
+                            <button id="btn_increase" onclick="stepper(this)">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7 - 8 người</td>
+                        <td style="display: flex; width: 5px;">
+                            <button id="btn_decrease" onclick="stepper(this)">-</button>
+                            <input type="number" name="numberupdown" id="amount_guess4" min="0" max="10" step="1" value="2"
+                                readonly>
+                            <button id="btn_increase" onclick="stepper(this)">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9 - 10 người</td>
+                        <td style="display: flex; width: 5px;">
+                            <button id="btn_decrease" onclick="stepper(this)">-</button>
+                            <input type="number" name="numberupdown" id="amount_guess5" min="0" max="10" step="1" value="2"
+                                readonly>
+                            <button id="btn_increase" onclick="stepper(this)">+</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script>
+
+    //open tabcontent when click tab_open
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab_open");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    //close tabcontent when click class close
+    var close = document.getElementsByClassName("close");
+    for (var i = 0; i < close.length; i++) {
+        close[i].onclick = function () {
+            var div = this.parentElement;
+            div.style.display = "none";
+        }
+    }
+
+
+    //create toggle tab with tab1 and tab2
+    var tab1 = document.getElementById("tab1");
+    var tab2 = document.getElementById("tab2");
+    var tablinks = document.getElementsByClassName("tab-slider--trigger");
+    tablinks[0].onclick = function () {
+        tab1.style.display = "block";
+        tab2.style.display = "none";
+        tablinks[0].className += " active";
+        tablinks[1].className = tablinks[1].className.replace(" active", "");
+    }
+    tablinks[1].onclick = function () {
+        tab1.style.display = "none";
+        tab2.style.display = "block";
+        tablinks[1].className += " active";
+        tablinks[0].className = tablinks[0].className.replace(" active", "");
+    }
+    
+    //decrease and increase amount guess when click button with id btn_decrease and btn_increase maximum 10 and minimum 0
+      function stepper(btn) {
+            var input = btn.parentNode.querySelector('input[type=number]');
+            var step = parseInt(input.getAttribute('step') || '1');
+            var min = parseInt(input.getAttribute('min') || '0');
+            var max = parseInt(input.getAttribute('max') || '10');
+            if (btn.id == 'btn_increase') {
+                if (input.value < max) {
+                    input.value = parseInt(input.value) + step;
+                }
+            } else {
+                if (input.value > min) {
+                    input.value = parseInt(input.value) - step;
+                }
+            }
+        }
+
+
+
+    
+
+
+
+
+
+    </script>
+</body>
+</html>
