@@ -47,6 +47,9 @@
     .review__text p {
         margin-right: 0;
     }
+    .modal-body--review {
+        padding-left: 30px;
+    }
     /* ---------location------- */
     .location {
         padding-bottom: 100px;

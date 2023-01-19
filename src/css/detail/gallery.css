@@ -55,7 +55,7 @@ img {
 .carousel-control--right {
     margin-right: 30px;
 }
-.close {
+.close__modal--img {
     color: #fff !important;
     opacity: 1 !important;
     font-size: 4rem !important;
