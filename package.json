@@ -4,6 +4,7 @@
   },
   "scripts": {
     "start": "json-server --watch db.json",
-    "web": "start ./src/html/index.html"
+    "web": "start ./src/html/index.html",
+    "detail": "start ./src/html/detail/detail.html"
   }
 }
