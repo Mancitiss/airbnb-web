@@ -12,10 +12,6 @@ body {
 .hidden {
     display: none;
 }
-.txtline__bold {
-    text-decoration: underline; 
-    font-weight: 600;
-}
 h2, h3, h4, h5 {
     font-weight: 700;
 }
@@ -150,7 +146,7 @@ h2, h3, h4, h5 {
     border-bottom: 2px solid #dddddd;
 }
 .conven__item {
-    margin: 5px 0;
+    margin: 10px 0;
 }
 .conven__item span{
     flex: 4;
@@ -224,6 +220,9 @@ h2, h3, h4, h5 {
 .table__location {
     width: 70%;
     margin: auto;
+}
+.table__location td {
+    padding-bottom: 20px;
 }
 .col__icon {
     text-align: center;

@@ -1,4 +1,9 @@
 
+@media (max-width: 1024px) {
+    .infor__user {
+        margin-top: 20px;
+    }
+}
 @media only screen and (max-width: 1070px) {
     .conven,
     .review__container {
@@ -13,7 +18,7 @@
         transform: translateY(520px);
     }
     .head__title h3{
-        font-size: 20px;
+        font-size: 23px;
     }
     #gallery__res {
         height: 450px;
@@ -36,6 +41,9 @@
     .detail__des {
         max-width: 100%;
     }
+    .review__text {
+        height: 50px;
+    } 
     .review__text p {
         margin-right: 0;
     }
@@ -78,7 +86,7 @@
         bottom: 0;
     }
     .footer__container {
-        height: 100px;
+        height: 120px;
         padding: 15px;
         box-shadow: 0px -5px 20px #ccc;
     }
@@ -87,11 +95,13 @@
     }
     .price {
         font-size: 1.8rem;
-        margin-bottom: 0;
+        margin: 7px 0;
     }
     .btn__choose--mobile {
         flex: 1;
         margin-top: 0;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 @media (max-width: 610px) {
@@ -105,5 +115,7 @@
     .general__task {
         margin-bottom: 0;
     }
-    
+    .review__text {
+        height: 70px;
+    } 
 }
