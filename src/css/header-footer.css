@@ -3,6 +3,7 @@
         color: #dcbdb8;
 }
 body{
+        font-size: 1.6rem;
         overflow-x: hidden;
 }
 section{
@@ -31,23 +32,15 @@ section{
 }
 /* =================HEADER============== */
 .container_search {
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;  
-        margin: 60px auto;  
+        margin: 0 20px;
 }
 
 .tabs_search {
         display: flex;
-        position: relative;
+        align-items: center;
         background-color: rgb(243, 241, 241);
         border-radius: 99px;
-        height: 80px;
+        height: 60px;
 }
 .tabs_search .inside_tab{
         display:flex;
@@ -78,7 +71,15 @@ table button {
         border-radius: 100px;
         cursor: pointer;
 }
-.tabs_search #text_place{
+.tabs_small {
+        /* max-width: 200px; */
+        margin-right: 5px;
+}
+.tabs_small:first-child {
+        /* width: 100px; */
+        margin-left: 10px;
+}
+.tabs_search .text_place{
         position: relative;
         top: -15px;
         background-color: transparent;
@@ -86,7 +87,8 @@ table button {
         text-align: center;
         left: 10%;
         width: 80%;
-        /* margin: auto 15% ; */
+        outline: none;
+        font-size: 1.5rem;
 }
 input[type=text]:focus {
         outline: none;
@@ -106,140 +108,164 @@ input[type=text]:focus {
         align-items: center;
         justify-content: center;
         height: 60px;
-        width: 200px;
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-weight: 500;
         border-radius: 99px;
         cursor: pointer;
+        margin-bottom: 0;
         transition: color 0.15s ease-in;
 }
 .tabs_search .search-web{
-        padding: 0 20px;
+        padding: 10px 13px 30px 13px;
+        margin-left: 20px;
+        margin-right: 10px;
+        height: 50%;
         border: none;
         background-color: #dcbdb8; 
         color: white;
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-weight: 400;
-        border-radius: 99px;
+        border-radius: 50%;
         align-items: center;
+        z-index: 2;
 }
 .tabs_search .search-web:hover {
         background-color: #dcbdb8;
         color: gray;
 }
+.icon_search {
+        margin-left: 5px;
+}
 
+.icon_search--down, .nav_bottom ,
 #input-search{
-        display: none;
+        display: none !important;
 }
 
 /* ------------------------------Responsive search bar------------------- */
-@media (max-width: 1100px) {
-        .header{
-                height: 70px;
-        }
-        
-        .header .logo{
-                margin: auto 50%;
-        }
-        header .split-button{
-                display: none;
-                
-        } 
+@media (max-width: 460px) {        
         .tabs_search {
-                        display: none;
-                } 
-       
-        .tabcontent{
-                /* tabcontent disapeear */
-                display: none;
-
+                height: 50px;
         }
-        /* show nav_bottom */
-       
-                .navigation {
-                        -webkit-box-align: center;
-                        position: fixed;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        height: 60px;
-                        display: flex;
-                        align-items: center;
-                        padding: 0 20px;
-                        border-top: 1px solid gray;
-                        transition: -ms-transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s, -webkit-transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s, transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s, visibility 0.2s ease 0s !important;
-                        z-index: 1 !important;
-        
-        
-                }
-        
-                .nav_bar {
-                        -webkit-box-pack: center;
-                        -webkit-box-align: start;
-                        flex: 1 0 auto;
-                        align-items: flex-start;
-                        display: flex;
-                        justify-content: center;
-                        margin: 0px auto;
-                        max-width: 560px;
-        
-                }
-        
-                .navigation a {
-                        text-decoration: none;
-                }
-                .navigation .nav-item button {
-                        border: none;
-                        background-color: transparent;
-                        padding: 10px;
-                }
-                
-        
-                .navigation .nav-item {
-                        display: flex;
-                        flex: 1 1 0px;
-                        flex-direction: column;
-                        align-items: center;
-                        cursor: pointer;
-                        background-color: transparent;
-                        text-align: center;
-                        text-decoration: none;
-                        border: 0px;
-                        max-width: 20%;
-                        min-width: 0px;
-                        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-                        overflow-wrap: break-word;
-                        hyphens: auto;
-                        padding: 0px 2px;
-                }
-        
-                .navigation i {
-                        color: gray;
-                }
-        
-                .navigation i:active {
-                        color: #dcbdb8;
-                }
-        
-                .navigation i:focus {
-                        color: #dcbdb8;
-                }
+        .tabs_search .text_place {
+                display: none;
+        }
+        .icon_search--down {
+                display: block;
+        }
+        .tab_search{
+                font-size: 1.1rem !important;
+        }
 }
-/* --------------------------Responsive navigation bottom------------------ */
-@media only screen and (max-width: 100vw) and (min-width: 1100px) {
+@media (max-width: 595px) {
+        .header--pc {
+                padding: 10px !important;
+        }
+        .container_search {
+                width: 100%;
+                margin: 0;
+        }
+        .tabs_small {
+                width: 100%;
+        }
+        .header .logo {
+                display: none;
+        }
+}
+@media (max-width: 684px) {
+        .tabs_search .search-web{
+                margin-left: 0;
+                margin-right: 5px;
+        }
+        .split-button {
+                display: none !important;
+        }
         .nav_bottom {
-                display: none;
+                display: block;
+        }
+        .navigation {
+                -webkit-box-align: center;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                padding: 0 20px;
+                border-top: 1px solid gray;
+                transition: -ms-transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s, -webkit-transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s, transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s, visibility 0.2s ease 0s !important;
+                z-index: 1 !important;
+
+
+        }
+
+        .nav_bar {
+                -webkit-box-pack: center;
+                -webkit-box-align: start;
+                flex: 1 0 auto;
+                align-items: flex-start;
+                display: flex;
+                justify-content: center;
+                margin: 0px auto;
+                max-width: 560px;
+
+        }
+
+        .navigation a {
+                text-decoration: none;
+        }
+        .navigation .nav-item button {
+                border: none;
+                background-color: transparent;
+                padding: 10px;
+        }
+        
+
+        .navigation .nav-item {
+                display: flex;
+                flex: 1 1 0px;
+                flex-direction: column;
+                align-items: center;
+                cursor: pointer;
+                background-color: transparent;
+                text-align: center;
+                text-decoration: none;
+                border: 0px;
+                max-width: 20%;
+                min-width: 0px;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                overflow-wrap: break-word;
+                hyphens: auto;
+                padding: 0px 2px;
+        }
+
+        .navigation i {
+                color: gray;
+        }
+
+        .navigation i:active {
+                color: #dcbdb8;
+        }
+
+        .navigation i:focus {
+                color: #dcbdb8;
+        }
+}
+@media (max-width: 750px) {
+        .tab_search, .tabs_search .text_place {
+                font-size: 1.3rem;
         }
 }
 
-header {
-        /* height: 120px ; */
-        padding: 20px 0;
+
+.header--pc {
+        padding: 20px 40px;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         border-bottom: 1px solid rgb(184, 183, 183);
-        position: fixed;
         background-color: white;
         z-index: 10;
 }
@@ -247,7 +273,8 @@ header {
 .header {
         display: flex;
         align-items: center;
-        justify-content: center; 
+        justify-content: space-between; 
+        height: 60px;
 }
 
 /* ---------------------Nút Dropdown loai phongf--------------------*/
@@ -284,10 +311,11 @@ header {
         /*Ẩn nội dụng các đường dẫn*/
         display: none;
         position: absolute;
+        top: 100px;
         background-color: #f1f1f1;
         min-width: 300px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
+        z-index: 10 !important;
 }
 
 /* Thiết kế style cho các đường dẫn tronng Dropdown */
@@ -304,7 +332,7 @@ header {
 
 /* --------------------------button profile-------------------------------- */
 .split-button{
-        display: inline-block;
+        display: block;
 }
 
 .border-btn {
@@ -317,13 +345,12 @@ header {
         height: 40px;
 }
 .header .logo{
-        width: 90%;
+        /* width: 90%; */
 }
 
 img {
         width: 25px;
         height: 25px;
-        margin-left: 10px;
 }
 
 .dropdown {

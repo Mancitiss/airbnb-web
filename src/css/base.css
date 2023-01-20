@@ -35,6 +35,11 @@ html {
     max-width: 100%;
     margin: 0 auto;
 }
+.grid1 {
+    width: 1400px;
+    max-width: 100%;
+    margin: 0 auto;
+}
 .flexspace_bw {
     display: flex;
     justify-content: space-between;

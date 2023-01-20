@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
     <!---------- CSS----------->
+    <link rel="stylesheet" href="../../css/header-footer.css">
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/detail/detail.css">
     <link rel="stylesheet" href="../../css/detail/detail_reponsive.css">
@@ -42,6 +43,122 @@
 </head>
 <body>
     <!-----------------ALL DEVICES--------------->
+    <header class="header--pc">
+        <div class="header">
+            <div class="logo" >
+                <img src="../../img/Logo (màu).png" alt="logo"  style="width: 100px; height: 70px;">
+            </div>
+
+            <!-- SEARCH TAB -->
+            <div class="container_search">
+                <div class="tabs_search">
+                    <div class="tabs_small">
+                        <span class="tab_search" for="">Địa điểm <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span>
+                        <input type="text" class="text_place" placeholder="Nhập tên tỉnh thành" />
+                    </div>
+
+                    <div class="tabs_small">
+                        <span class="tab_search" for="">Nhận <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span>
+                        <input type="date" class="text_place" placeholder="dd/mm/yyyy" style="color:gray;"/>
+                    </div>
+
+                    <div class="tabs_small">
+                        <span class="tab_search" for="" onclick="openCity(event, 'check_out')">Trả <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span> 
+                        <input type="date" class="text_place" placeholder="dd/mm/yyyy" style="color:gray;"/>
+                    </div>
+                    
+                    <div class="tabs_small tabs_small--type">
+                        <label class="tab_search">
+                            <span class="tab_search">Loại</span>
+                                    <i class="fa-solid fa-chevron-down icon_search"></i>
+                        </label>
+                            
+                        <div class="noidung_dropdown">
+                            <table>
+                                <thead style="text-align: center; font-weight: 600; color: #dcbdb8;">
+                                    <td>Loại phòng</td>
+                                    <td>Số lượng</td>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1-2 người</td>
+                                        <td style="display: flex; width: 5px;">
+                                            <button class="btn_decrease" onclick="stepper(this)">-</button>
+                                            <input type="number" name="numberupdown" id="amount_guess1" min="0" max="10" step="1" value="2"
+                                                readonly>
+                                            <button class="btn_increase" onclick="stepper(this)">+</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3-4 người</td>
+                                        <td style="display: flex; width: 5px;">
+                                            <button class="btn_decrease" onclick="stepper(this)">-</button>
+                                            <input type="number" name="numberupdown" id="amount_guess2" min="0" max="10" step="1" value="2"
+                                                readonly>
+                                            <button class="btn_increase" onclick="stepper(this)">+</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5-6 người</td>
+                                        <td style="display: flex; width: 5px;">
+                                            <button class="btn_decrease" onclick="stepper(this)">-</button>
+                                            <input type="number" name="numberupdown" id="amount_guess3" min="0" max="10" step="1" value="2"
+                                                readonly>
+                                            <button class="btn_increase" onclick="stepper(this)">+</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7-8 người</td>
+                                        <td style="display: flex; width: 5px;">
+                                            <button class="btn_decrease" onclick="stepper(this)">-</button>
+                                            <input type="number" name="numberupdown" id="amount_guess4" min="0" max="10" step="1" value="2"
+                                                readonly>
+                                            <button class="btn_increase" onclick="stepper(this)">+</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>9-10 người</td>
+                                        <td style="display: flex; width: 5px;">
+                                            <button class="btn_decrease" onclick="stepper(this)">-</button>
+                                            <input type="number" name="numberupdown" id="amount_guess5" min="0" max="10" step="1" value="2"
+                                                readonly>
+                                            <button class="btn_increase" onclick="stepper(this)">+</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>                        
+                    </div>
+                    
+                    <input type="text" placeholder="Tìm kiếm" id="input-search"/>
+                    <button class="search-web">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- sliding tab -->
+    
+            <!-- Split button -->
+            <div class="split-button">
+                <div class="border-btn">
+                    <div class="dropdown">
+                        <button class="btn">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a class="top" href="#">Yêu thích</a>
+                            <a class="top" href="#" style="border-bottom: 1px solid rgb(184, 183, 183);">Hồ sơ</a>
+                            <a href="#">Đăng xuất</a>
+                        </div>
+                    </div>
+                    <img src="https://api-private.atlassian.com/users/5e315f6f6bd5c40ca3959005/avatar?initials=public" alt="">
+                </div>
+            </div>  
+        </div>
+    </header>
+
     <div class="grid body">
         <!-------------head------------------>
         <div class="head__title">
@@ -78,7 +195,7 @@
                 <a target="_blank" href="https://a0.muscache.com/im/pictures/9e96aa88-cbfb-4e63-9f1b-69b0254a7561.jpg?im_w=1200">
                     <img class="gallery__item gallery__item--s gallery__item--s--2" src="https://a0.muscache.com/im/pictures/9e96aa88-cbfb-4e63-9f1b-69b0254a7561.jpg?im_w=1200" alt="hinh-anh-khach-san">
                 </a>
-                <div style="height: inherit; position: relative;">
+                <div class="block__item__overlay">
                     <img class="gallery__item gallery__item--s gallery__item--s--3" src="https://a0.muscache.com/im/pictures/c69235e2-5cd4-48ab-860d-49aca384d89d.jpg?im_w=720" alt="hinh-anh-khach-san">
                     <div class="overlay overlay__moreimg" data-toggle="modal" data-target="#modal__img">Hiển thị thêm hình ảnh</div>
                 </div>
@@ -88,7 +205,7 @@
         <div id="gallery__res"></div>
     
         <!-----------------2 cols------------------->
-        <div style="display: flex; justify-content: space-between">
+        <div style="display: flex; justify-content: space-between; position: relative;">
             <!------col left: description + review ----->
             <div class="des__re">
                 <!-------------description----------->
@@ -700,7 +817,7 @@
     <!-----------------END DEVICES--------------->
 
     <!------------------MOBILE------------------->
-    <header class="same">
+    <header class="same header--mobile">
         <div class="header__container flexspace_bw">
             <div style="cursor: pointer;">
                 <i class="fa-solid fa-chevron-left" style="padding: 10px;"></i>
@@ -713,7 +830,7 @@
         </div>
     </header>
 
-    <footer class="same">
+    <footer class="same footer--mobile">
         <div class="footer__container flexspace_bw">
             <div class="infor__room">
                <b>Giá/phòng/đêm/từ</b>  <br>
@@ -859,19 +976,13 @@
             
             // sticky reservation box
             $(window).on('scroll', function() {
-            //     w = $('.des__re').width() + 205;
-            //     console.log(w);
-            //     if($(this).scrollTop()>= 600 && $(this).scrollTop()<= 1600)
-            //         $('.reser__box').css({
-            //             "position": "fixed",
-            //             "top": "0",
-            //             "left": w,
-            //         });
-            //     else 
-            //         $('.reser__box').css({
-            //             "position": "static"
-            //         })                   
+                if($(this).scrollTop()>= 600) {
+                    $('.reser__box').addClass('sticky');
+                }
             });
+        
+            // margin of title
+            $('.body').css("margin-top", $('.header--pc').height() + 30);
         });
     </script>
     <script>
@@ -881,5 +992,35 @@
         });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+        //increase and decrease number of guest with maximum 10 people and minimum 0 people
+        function stepper(btn) {
+            var input = btn.parentNode.querySelector('input[type=number]');
+            var step = parseInt(input.getAttribute('step') || '1');
+            var min = parseInt(input.getAttribute('min') || '0');
+            var max = parseInt(input.getAttribute('max') || '10');
+            if (btn.className == 'btn_increase') {
+                if (input.value < max) {
+                    input.value = parseInt(input.value) + step;
+                }
+            } else {
+                if (input.value > min) {
+                    input.value = parseInt(input.value) - step;
+                }
+            }
+        }
+        
+        
+        // open noidung when click on button nut_dropdown
+         $('.tabs_small--type').click(function() {
+            $('.noidung_dropdown').toggleClass('hienThi');
+         }); 
+         $('.noidung_dropdown').click(function(e) {
+            e.stopPropagation()
+         })
+
+    </script>
 </body>
 </html>
