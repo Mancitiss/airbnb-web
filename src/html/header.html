@@ -33,22 +33,26 @@
                 <div class="tabs_search">
                     <div class="tabs_small">
                         <span class="tab_search tab_search--res" for="">Địa điểm <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span>
+
                         <input type="text" class="text_place" placeholder="Nhập tên tỉnh thành" />
                     </div>
 
                     <div class="tabs_small">
                         <span class="tab_search tab_search--sm" for="">Nhận <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span>
+
                         <input type="date" class="text_place" placeholder="dd/mm/yyyy" style="color:gray;"/>
                     </div>
 
                     <div class="tabs_small">
                         <span class="tab_search tab_search--sm" for="">Trả <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span> 
+
                         <input type="date" class="text_place" placeholder="dd/mm/yyyy" style="color:gray;"/>
                     </div>
                     
                     <div class="tabs_small tabs_small--type">
                         <label class="tab_search tab_search--sm">
                             <span class="tab_search tab_search--sm">Loại</span>
+
                                     <i class="fa-solid fa-chevron-down icon_search"></i>
                         </label>
                             
@@ -108,7 +112,6 @@
                             </table>
                         </div>                        
                     </div>
-                   
                     <input type="text" placeholder="Tìm kiếm" id="input-search"/>
                     <button class="search-web">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -169,12 +172,11 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    
+    </div>    
 
     <script src="../js/button_type.js"></script>
     <script>     
+
         // open noidung when click on button nut_dropdown
          $('.tabs_small--type').click(function() {
             $('.noidung_dropdown').toggleClass('hienThi');
@@ -195,8 +197,6 @@
                 $('#search-res').click(function(e) {
                     e.stopPropagation();
                 })
-                
-            
     </script>
 
 
