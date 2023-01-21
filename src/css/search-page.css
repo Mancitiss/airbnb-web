@@ -4,15 +4,14 @@ body{
 
 .cover_dropdown{
     width: 95%;
-    height: 50%;
-    margin: auto 3%;
+    /* heights: 50%; */
     background-color: whitesmoke;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 5%;
+    /* margin-bottom: 5%; */
 }
 .cover_dropdown .tab_open{
-    padding: 20px 10px;
+    /* padding: 20px 10px; */
 }
 .cover_dropdown label {
     font-size: 20px;
@@ -21,13 +20,15 @@ body{
 }
 .cover_dropdown i{
     margin: auto 10px ;
-    font-size: medium;
+    /* font-size: medium; */
     float: right;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
+
 .tabcontent {
-    padding: 10px 30px 30px 50px;
-    margin-bottom: 50px;
+    /* margin: auto; */
+    padding: 0 30px 10px 30px;
+    /* margin-bottom: 10px !important; */
     
 }
 .tabcontent .close{
@@ -35,28 +36,28 @@ body{
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
+    padding-left: 10px;
 }
 .tabcontent .close:hover{
     color: red;
 }
 .tabcontent .input_search{
     width: 90%;
-    height: 40px;
+    /* height: 40px; */
     border-radius: 10px;
     border: 1px solid #ccc;
-    padding: 10px;
-    font-size: 16px;
+    /* padding: 10px; */
     display: flex;
-    align-self: center;
+    align-items: center !important;
 }
 .tabcontent .input_search input {
     width: 90%;
-    height: 20px;
+    height: 47px;
     border-radius: 10px;
     border: none;
-        padding: 10px;
-        font-size: 16px;
-        background-color: transparent;
+    padding: 15px 0;
+    font-size: 1.5rem;
+    background-color: transparent;
 }
 .tabcontent input:focus{
     outline: none;
@@ -73,17 +74,26 @@ body{
  .tabcontent table button:hover {
      background-color: #dcbdb8;
  }
-    .tabcontent table td {
-        margin: 10px 30px;
-    }
+.tabcontent table td {
+    font-size: 1.5rem;
+    /* margin: 10px 30px; */
+}
 .tabcontent .cover_date .datebook {
     margin: 0 20px 0 0;
-    font-size: 12px;
+    font-size: 1.5rem;
      font-weight: 600; 
      color: #dcbdb8;
+     display: inline-block;
 }
-
-
+.datebook p {
+    font-size: 1.3rem;
+}
+#checkin_date, #checkout_date {
+    font-size: 1.5rem;
+}
+.icon_x--time {
+    margin-bottom: 20px;
+}
 
 /* Nút Dropdown*/
 .nut_dropdown {
@@ -124,11 +134,20 @@ body{
 } */
 
 .tabcontent{
-    display: none;
+    /* display: none; */
 }
 
-@media (max-width: 776px) {
+@media (max-width: 460px) {
+    .tab_search--res {
+        height: 47px;
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 350px) {
+    .tabcontent {
+        padding: 0 0 10px 10px;        
+    }
     .tabcontent .input_search input {
-        margin: auto auto ;
+        height: 40px;
     }
 }
