@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="grid">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -144,9 +144,7 @@
             <div class="split-button">
                 <div class="border-btn">
                     <div class="dropdown">
-                        <button class="btn">
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
+                        <span>&#9776;</span>
                         <div class="dropdown-content">
                             <a class="top" href="#">Yêu thích</a>
                             <a class="top" href="#" style="border-bottom: 1px solid rgb(184, 183, 183);">Hồ sơ</a>
@@ -158,7 +156,8 @@
             </div>  
         </div>
     </header>
-
+    <!-- Resposive -->
+    <div id="gallery__res"></div>
     <div class="grid body">
         <!-------------head------------------>
         <div class="head__title">
@@ -197,12 +196,11 @@
                 </a>
                 <div class="block__item__overlay">
                     <img class="gallery__item gallery__item--s gallery__item--s--3" src="https://a0.muscache.com/im/pictures/c69235e2-5cd4-48ab-860d-49aca384d89d.jpg?im_w=720" alt="hinh-anh-khach-san">
-                    <div class="overlay overlay__moreimg" data-toggle="modal" data-target="#modal__img">Hiển thị thêm hình ảnh</div>
+                    <div class="overlay overlay__moreimg">Hiển thị thêm hình ảnh</div>
                 </div>
             </div>
         </div>
-        <!-- Resposive -->
-        <div id="gallery__res"></div>
+        
     
         <!-----------------2 cols------------------->
         <div style="display: flex; justify-content: space-between; position: relative;">
@@ -814,6 +812,8 @@
             </div>
         </div>
     </div>
+
+    <div id="footer"></div>
     <!-----------------END DEVICES--------------->
 
     <!------------------MOBILE------------------->
@@ -983,16 +983,24 @@
         
             // margin of title
             $('.body').css("margin-top", $('.header--pc').height() + 30);
+
+            // see more images
+            $('.overlay__moreimg').click(function() {
+                $('#listimg').css("display","block");
+            });
         });
     </script>
     <script>
         $(document).ready(function() {
             $("#listimg").load("gallery_modal.html");
             $("#gallery__res").load("gallery.html");
+            $("#footer").load("../footer.html");
         });
     </script>
+    <!---------- OWL CAROUSEL ------------>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-------- FOR HEADER -------->
     <script>
 
         //increase and decrease number of guest with maximum 10 people and minimum 0 people

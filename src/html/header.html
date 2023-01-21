@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/header-footer.css">
 
+     <!------------ JQUERY --------------->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <!-- SPLIT BUTTON -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -30,23 +32,27 @@
             <div class="container_search">
                 <div class="tabs_search">
                     <div class="tabs_small">
-                        <span class="tab_search" for="">Địa điểm <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span>
+                        <span class="tab_search tab_search--res" for="">Địa điểm <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span>
+
                         <input type="text" class="text_place" placeholder="Nhập tên tỉnh thành" />
                     </div>
 
                     <div class="tabs_small">
-                        <span class="tab_search" for="">Nhận <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span>
+                        <span class="tab_search tab_search--sm" for="">Nhận <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span>
+
                         <input type="date" class="text_place" placeholder="dd/mm/yyyy" style="color:gray;"/>
                     </div>
 
                     <div class="tabs_small">
-                        <span class="tab_search" for="" onclick="openCity(event, 'check_out')">Trả <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span> 
+                        <span class="tab_search tab_search--sm" for="">Trả <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span> 
+
                         <input type="date" class="text_place" placeholder="dd/mm/yyyy" style="color:gray;"/>
                     </div>
                     
                     <div class="tabs_small tabs_small--type">
-                        <label class="tab_search">
-                            <span class="tab_search">Loại</span>
+                        <label class="tab_search tab_search--sm">
+                            <span class="tab_search tab_search--sm">Loại</span>
+
                                     <i class="fa-solid fa-chevron-down icon_search"></i>
                         </label>
                             
@@ -106,22 +112,20 @@
                             </table>
                         </div>                        
                     </div>
-                    
                     <input type="text" placeholder="Tìm kiếm" id="input-search"/>
                     <button class="search-web">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
 
                 </div>
+                <div id="search-res"></div>
             </div>
             <!-- sliding tab -->
             <!-- Split button -->
             <div class="split-button">
                 <div class="border-btn">
                     <div class="dropdown">
-                        <button class="btn">
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
+                        <p>&#9776;</p>
                         <div class="dropdown-content">
                             <a class="top" href="#">Yêu thích</a>
                             <a class="top" href="#" style="border-bottom: 1px solid rgb(184, 183, 183);">Hồ sơ</a>
@@ -140,64 +144,59 @@
                 <div class="nav-item">
                     <a href="#">
                         <button>
-                            <i class="fa-solid fa-home"></i>
-                        </button>
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="../html/Search_page.html">
-                        <button>
-                            <i class="fa-solid fa-search"></i>
+                            <i class="fa-solid fa-home icon_bottomnav"></i>
                         </button>
                     </a>
                 </div>
                 <div class="nav-item">
                     <a href="#">
                         <button>
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-search icon_bottomnav"></i>
                         </button>
                     </a>
                 </div>
                 <div class="nav-item">
                     <a href="#">
                         <button>
-                            <i class="fa-regular fa-user"></i>
+                            <i class="fa-regular fa-heart icon_bottomnav"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#">
+                        <button>
+                            <i class="fa-regular fa-user icon_bottomnav"></i>
                         </button>
                         
                     </a>
                 </div>
             </div>
         </div>
-    </div>
-    
+    </div>    
 
-    <script>
-       //increase and decrease number of guest with maximum 10 people and minimum 0 people
-       function stepper(btn) {
-            var input = btn.parentNode.querySelector('input[type=number]');
-            var step = parseInt(input.getAttribute('step') || '1');
-            var min = parseInt(input.getAttribute('min') || '0');
-            var max = parseInt(input.getAttribute('max') || '10');
-            if (btn.className == 'btn_increase') {
-                if (input.value < max) {
-                    input.value = parseInt(input.value) + step;
-                }
-            } else {
-                if (input.value > min) {
-                    input.value = parseInt(input.value) - step;
-                }
-            }
-        }
-        
-        
+    <script src="../js/button_type.js"></script>
+    <script>     
+
         // open noidung when click on button nut_dropdown
          $('.tabs_small--type').click(function() {
             $('.noidung_dropdown').toggleClass('hienThi');
          }); 
          $('.noidung_dropdown').click(function(e) {
             e.stopPropagation()
-         })
+         });
+         $('#search-res').load('Search_page.html');
 
+         $('.container_search').click(function() {
+            var width = $(window).width();
+            if (width <= 460)
+                $('#search-res').toggleClass("hienThi");
+         })
+         $(window).resize(function() {
+            $('#search-res').removeClass("hienThi");
+        });
+                $('#search-res').click(function(e) {
+                    e.stopPropagation();
+                })
     </script>
 
 

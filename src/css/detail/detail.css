@@ -70,6 +70,8 @@ h2, h3, h4, h5 {
     align-items: center;
 }
 .btn__close--toast {
+    outline: none;
+    border: none;
     padding: 10px;
 }
 .content__toast {
@@ -156,11 +158,14 @@ h2, h3, h4, h5 {
 .overlay__moreimg:hover {
     background: rgba(0, 0, 0, 0.3);
 }
-
+/*---------------see more imgs -------------- */
+#listimg {
+    display: none;
+}
 /* ------------ modal intro --------------*/
 .modal-dialog--intro {
     width: 900px !important;
-    max-width: 100%;
+    max-width: 95%;
 }
 .modal-body {
     padding: 20px 30px;

@@ -79,6 +79,9 @@ table button {
         /* width: 100px; */
         margin-left: 10px;
 }
+.tabs_small--type {
+        position: relative;
+}
 .tabs_search .text_place{
         position: relative;
         top: -15px;
@@ -141,7 +144,13 @@ input[type=text]:focus {
 #input-search{
         display: none !important;
 }
-
+#search-res {
+        width: 100%;
+        display: none;
+}
+.icon_bottomnav {
+        font-size: 1.5rem;
+}
 /* ------------------------------Responsive search bar------------------- */
 @media (max-width: 460px) {        
         .tabs_search {
@@ -153,8 +162,14 @@ input[type=text]:focus {
         .icon_search--down {
                 display: block;
         }
-        .tab_search{
-                font-size: 1.1rem !important;
+        
+        .tab_search--sm{
+                display: none;
+        }
+
+        #search-res {
+                position: absolute;
+                top: 70px;
         }
 }
 @media (max-width: 595px) {
@@ -164,6 +179,7 @@ input[type=text]:focus {
         .container_search {
                 width: 100%;
                 margin: 0;
+                cursor: pointer;
         }
         .tabs_small {
                 width: 100%;
@@ -181,7 +197,11 @@ input[type=text]:focus {
                 display: none !important;
         }
         .nav_bottom {
-                display: block;
+                display: block !important;
+        }
+        .noidung_dropdown {
+                font-size: 1.3rem !important;
+                transform: translateX(-50%);
         }
         .navigation {
                 -webkit-box-align: center;
@@ -257,8 +277,6 @@ input[type=text]:focus {
                 font-size: 1.3rem;
         }
 }
-
-
 .header--pc {
         padding: 20px 40px;
         position: fixed;
@@ -311,9 +329,11 @@ input[type=text]:focus {
         /*Ẩn nội dụng các đường dẫn*/
         display: none;
         position: absolute;
-        top: 100px;
+        top: 60px;
+        left: 0;
         background-color: #f1f1f1;
-        min-width: 300px;
+        width: 250px;
+        font-size: 1.5rem;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 10 !important;
 }
@@ -327,7 +347,7 @@ input[type=text]:focus {
 }
 
 .hienThi {
-        display: block;
+        display: block !important;
 }
 
 /* --------------------------button profile-------------------------------- */
@@ -354,12 +374,13 @@ img {
 }
 
 .dropdown {
+        position: relative;
         width: 30px;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-        margin-top: 1px;
+        top: 35px;
         right: 0;
         left: -90px;
         display: none;
@@ -370,7 +391,14 @@ img {
         z-index: 100;
         border-radius: 10px;
 }
-
+.dropdown::after {
+        display: block;
+        position: absolute;
+        right: -40px;
+        content: "";
+        width: 90px;
+        height: 20px;
+}
 /* Links inside the dropdown */
 .dropdown-content a {
         color: black;
@@ -538,8 +566,8 @@ img {
 
 /* =======================FOOTER=================================== */
 footer {
-        position: absolute;
-        width: 100vw;;
+        /* position: absolute; */
+        /* width: 100vw;; */
 }
 
 .site-footer {
