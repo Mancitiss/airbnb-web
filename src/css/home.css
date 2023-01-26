@@ -1,0 +1,150 @@
+.container_place {
+    margin-top: 20px;
+    padding: 0 45px !important;
+}
+
+.place {
+    justify-content: center;
+}
+
+.information__place {
+    position: relative;
+    height: 330px;
+    /* background: #ccc; */
+    line-height: 1.8;
+}
+.img__place {
+    padding-top: 40%;
+    height: 215px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.infor__room {
+    margin-top: 5px;
+}
+.price__place, .star__place, .rate__place,
+.name__place {
+    font-size: 1.4rem;
+}
+.name__place {
+    line-height: 1.8rem;
+    height: 1.8rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+
+}
+.star__place {
+    margin-left: 5px;
+}
+.heart__place {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* z-index: 10; */
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    /* transition: all ease 0.; */
+}
+
+.heart__place--filled {
+    visibility: hidden;
+    /* color: red; */
+}
+.hidden {
+    visibility: hidden;
+}
+.visible{
+    visibility: visible;
+}
+
+/* ----------------toast------------- */
+.toast-favo {
+    position: fixed;
+    top: 105px;
+    right: 20px;
+    border-left: 3px solid red;
+    background: #fff;
+}
+.toast__body--favo {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn__close--toast {
+    outline: none;
+    border: none;
+    padding: 10px;
+    z-index: 2;
+}
+.content__toast {
+    padding-left: 10px;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+.seemore--container {
+    text-align: center;
+}
+.seemore--container button {
+    background: var(--main-color);
+    padding: 20px 80px;
+    color: white;
+}
+.seemore--container button:hover {
+    background: var(--main-color);
+    color: white;
+}
+/* --------------filter + arrange -------------- */
+.filter__arrange {
+    margin-top: 110px;
+    padding: 0 50px;
+}
+.action--filter {
+    float: left;
+    margin-right: 20px;
+}
+.action {
+    position: relative;
+    min-width: 125px;
+    text-align: center;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 5px 5px 5px #eee;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.action__children {
+    display: none;
+    min-width: 200px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    z-index: 1;
+    text-align: left;
+    padding: 10px 20px;
+    line-height: 2;
+    box-shadow: 0 0 10px #ddd;
+    height: max-content;
+}
+.action__children input {
+    float: right;
+    margin-top: 10px;
+}
+.show {
+    display: block;
+}
+@media (max-width: 595px) {
+    .filter__arrange {
+        margin-top: 90px;
+    }
+}
