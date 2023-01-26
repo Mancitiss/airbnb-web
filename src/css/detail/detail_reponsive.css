@@ -9,9 +9,6 @@
     .review__container {
         column-count: 1;
     }
-    .review__text {
-        height: 100px;
-    }
 }
 @media only screen and (max-width: 780px) {
     .head__title {
@@ -21,7 +18,7 @@
         font-size: 23px;
     }
     #gallery__res {
-        height: 350px;
+        height: 450px;
         display: block;
     }
     .general__des {
@@ -41,9 +38,6 @@
     .detail__des {
         max-width: 100%;
     }
-    .review__text {
-        height: 50px;
-    } 
     .review__text p {
         margin-right: 0;
     }
@@ -123,7 +117,4 @@
     .general__task {
         margin-bottom: 0;
     }
-    .review__text {
-        height: 70px;
-    } 
 }
