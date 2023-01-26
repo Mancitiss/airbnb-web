@@ -172,9 +172,9 @@ input[type=text]:focus {
                 top: 70px;
         }
 }
-@media (max-width: 595px) {
+@media (max-width: 620px) {
         .header--pc {
-                padding: 10px !important;
+                padding: 10px 30px 10px 10px !important;
         }
         .container_search {
                 width: 100%;
@@ -188,7 +188,7 @@ input[type=text]:focus {
                 display: none;
         }
 }
-@media (max-width: 684px) {
+@media (max-width: 804px) {
         .tabs_search .search-web{
                 margin-left: 0;
                 margin-right: 5px;
@@ -216,8 +216,7 @@ input[type=text]:focus {
                 border-top: 1px solid gray;
                 transition: -ms-transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s, -webkit-transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s, transform 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s, visibility 0.2s ease 0s !important;
                 z-index: 1 !important;
-
-
+                background: #fff;
         }
 
         .nav_bar {
@@ -352,6 +351,7 @@ input[type=text]:focus {
 
 /* --------------------------button profile-------------------------------- */
 .split-button{
+        margin-right: 27px;
         display: block;
 }
 
