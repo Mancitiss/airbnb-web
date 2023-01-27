@@ -1,0 +1,21 @@
+.container_place {
+    margin-top: 120px; 
+    margin-bottom: 50px;
+}
+.heart__place--empty {
+    visibility: hidden;
+}
+.heart__place--filled {
+    visibility: visible;
+}
+.visible {
+    visibility: visible;
+}
+.hidden {
+    visibility: hidden;
+}
+.undo {
+    font-size: 1.4rem;
+    cursor: pointer;
+    text-decoration: underline;
+}

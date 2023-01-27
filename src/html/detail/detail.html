@@ -46,7 +46,9 @@
     <header class="header--pc">
         <div class="header">
             <div class="logo" >
-                <img src="../../img/Logo (màu).png" alt="logo"  style="width: 100px; height: 70px;">
+                <a href="../home.html" target="_blank">
+                    <img src="../../img/Logo (màu).png" alt="logo"  style="width: 100px; height: 70px;">
+                </a>
             </div>
 
             <!-- SEARCH TAB -->
@@ -131,7 +133,7 @@
                     </div>
                     
                     <input type="text" placeholder="Tìm kiếm" id="input-search"/>
-                    <button class="search-web">
+                    <button class="search-web" onclick="location.href='../home.html'">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
 
@@ -148,14 +150,16 @@
                             <i class="fa-solid fa-bars"></i>
                         </button>
                         <div class="dropdown-content">
-                            <a class="top" href="#">Yêu thích</a>
-                            <a class="top" href="#" style="border-bottom: 1px solid rgb(184, 183, 183);">Hồ sơ</a>
+                            <a class="top" href="#">Hộp thư</a>
+                            <a class="top" href="#">Chìa khóa</a>
+                            <a class="top" href="../favorite.html" style="border-bottom: 1px solid rgb(184, 183, 183);">Yêu thích</a>
+                            <a class="top" href="#">Hồ sơ</a>
                             <a href="#">Đăng xuất</a>
                         </div>
                     </div>
                     <img src="https://api-private.atlassian.com/users/5e315f6f6bd5c40ca3959005/avatar?initials=public" alt="">
                 </div>
-            </div>  
+            </div> 
         </div>
     </header>
     <!-- Resposive -->
@@ -822,12 +826,15 @@
     <header class="same header--mobile">
         <div class="header__container flexspace_bw">
             <div style="cursor: pointer;">
-                <i class="fa-solid fa-chevron-left" style="padding: 10px;"></i>
-                Trang chủ &nbsp &nbsp 
+                <a href="../home.html" style="text-decoration: none;">
+                    <i class="fa-solid fa-chevron-left" style="padding: 10px; color: black;"></i>
+                    <span style="color: black;">Trang chủ</span> 
+                </a>
             </div>
             <div>
                 <i class="ti-export icon header__icon header__icon--share"></i>
-                <i class="ti-heart icon header__icon header__icon--favo"></i>
+                <i class="fa-regular fa-heart icon header__icon header__icon--favo header__icon--favo--empty"></i>
+                <i class="fa-solid fa-heart icon header__icon header__icon--favo header__icon--favo--filled"></i>
             </div>
         </div>
     </header>
@@ -854,8 +861,13 @@
     <div class="toast toast-favo">
         <div class="toast-body toast__body--favo">
             <p class="content__toast"></p>
-            <button type="button" class="btn-close btn__close--toast" data-bs-dismiss="toast"></button>
+            <a href="../favorite.html" target="_blank">Xem</a>
         </div>
+    </div>
+
+    <!----------- TOAST FAVO MOBILE ----------->
+    <div class="alert alert-success alert-success--favo">
+        <span class="content__toast--mobile"></span>
     </div>
     
     <script>
@@ -954,7 +966,7 @@
                 },    
             });
         
-            // item favo event
+            // item favo event (show toast)
             $('.task__item--favo').mouseup(function() {
                 if($('.text__favo').text() === "Yêu thích") {
                     $('.toast-favo').addClass('show');
@@ -963,7 +975,7 @@
                     $('.task__item--favo').css({"background":"red", "color":"#fff"});
                     setTimeout(function() { 
                         $('.toast-favo').removeClass('show');
-                    }, 3000);
+                    }, 4000);
                 }
                 else {
                     $('.toast-favo').addClass('show');
@@ -972,7 +984,7 @@
                     $('.task__item--favo').css({"background":"#fff", "color":"red"});
                     setTimeout(function() { 
                         $('.toast-favo').removeClass('show');
-                    }, 3000);
+                    }, 4000);
                 }
             })
             
@@ -983,12 +995,32 @@
                 }
             });
         
-            // margin of title
+            // margin of title Chang Tropical
             $('.body').css("margin-top", $('.header--pc').height() + 30);
 
             // see more images
             $('.overlay__moreimg').click(function() {
                 $('#listimg').css("display","block");
+            });
+
+            // toast favo mobile
+            $('.header__icon--favo--empty').click(function() {
+                $(this).css("display","none");
+                $(this).next().css("display","inline-block");
+                $('.alert-success--favo').css("display","block");
+                $('.content__toast--mobile').text("Đã thêm vào danh sách yêu thích");
+                setTimeout(function() { 
+                    $('.alert-success--favo').css("display","none");;
+                }, 3000);
+            });
+            $('.header__icon--favo--filled').click(function() {
+                $(this).prev().css("display","inline-block");
+                $(this).css("display","none");
+                $('.alert-success--favo').css("display","block");
+                $('.content__toast--mobile').text("Đã xóa khỏi danh sách yêu thích");
+                setTimeout(function() { 
+                    $('.alert-success--favo').css("display","none");;
+                }, 3000);
             });
         });
     </script>

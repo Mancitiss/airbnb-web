@@ -1,0 +1,144 @@
+<header class="header--pc">
+    <div class="header">
+        <div class="logo" >
+            <a href="./home.html" target="_blank">
+                <img src="../img/Logo (màu).png" alt="logo"  style="width: 100px; height: 70px;">
+            </a>
+        </div>
+
+        <!-- SEARCH TAB -->
+        <div class="container_search">
+            <div class="tabs_search">
+                <div class="tabs_small">
+                    <span class="tab_search tab_search--res" for="">Địa điểm <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span>
+
+                    <input type="text" class="text_place" placeholder="Nhập tên tỉnh thành" />
+                </div>
+
+                <div class="tabs_small">
+                    <span class="tab_search tab_search--sm" for="">Nhận <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span>
+
+                    <input type="date" class="text_place" placeholder="dd/mm/yyyy" style="color:gray;"/>
+                </div>
+
+                <div class="tabs_small">
+                    <span class="tab_search tab_search--sm" for="">Trả <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span> 
+
+                    <input type="date" class="text_place" placeholder="dd/mm/yyyy" style="color:gray;"/>
+                </div>
+                
+                <div class="tabs_small tabs_small--type">
+                    <label class="tab_search tab_search--sm">
+                        <span class="tab_search tab_search--sm">Loại</span>
+
+                                <i class="fa-solid fa-chevron-down icon_search"></i>
+                    </label>
+                        
+                    <div class="noidung_dropdown">
+                        <table>
+                            <thead style="text-align: center; font-weight: 600; color: #dcbdb8;">
+                                <td>Loại phòng</td>
+                                <td>Số lượng</td>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1-2 người</td>
+                                    <td style="display: flex; width: 5px;">
+                                        <button class="btn_decrease" onclick="stepper(this)">-</button>
+                                        <input type="number" name="numberupdown" id="amount_guess1" min="0" max="10" step="1" value="2"
+                                            readonly>
+                                        <button class="btn_increase" onclick="stepper(this)">+</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3-4 người</td>
+                                    <td style="display: flex; width: 5px;">
+                                        <button class="btn_decrease" onclick="stepper(this)">-</button>
+                                        <input type="number" name="numberupdown" id="amount_guess2" min="0" max="10" step="1" value="2"
+                                            readonly>
+                                        <button class="btn_increase" onclick="stepper(this)">+</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5-6 người</td>
+                                    <td style="display: flex; width: 5px;">
+                                        <button class="btn_decrease" onclick="stepper(this)">-</button>
+                                        <input type="number" name="numberupdown" id="amount_guess3" min="0" max="10" step="1" value="2"
+                                            readonly>
+                                        <button class="btn_increase" onclick="stepper(this)">+</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7-8 người</td>
+                                    <td style="display: flex; width: 5px;">
+                                        <button class="btn_decrease" onclick="stepper(this)">-</button>
+                                        <input type="number" name="numberupdown" id="amount_guess4" min="0" max="10" step="1" value="2"
+                                            readonly>
+                                        <button class="btn_increase" onclick="stepper(this)">+</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9-10 người</td>
+                                    <td style="display: flex; width: 5px;">
+                                        <button class="btn_decrease" onclick="stepper(this)">-</button>
+                                        <input type="number" name="numberupdown" id="amount_guess5" min="0" max="10" step="1" value="2"
+                                            readonly>
+                                        <button class="btn_increase" onclick="stepper(this)">+</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>                        
+                </div>
+                <input type="text" placeholder="Tìm kiếm" id="input-search"/>
+                <button class="search-web" onclick="location.href='./home.html'">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+            </div>
+            <div id="search-res"></div>
+        </div>
+        <!-- sliding tab -->
+        <!-- Split button -->
+        <div class="split-button">
+            <div class="border-btn">
+                <div class="dropdown">
+                    <button class="btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a class="top" href="#">Hộp thư</a>
+                        <a class="top" href="#">Chìa khóa</a>
+                        <a class="top" href="./favorite.html" style="border-bottom: 1px solid rgb(184, 183, 183);">Yêu thích</a>
+                        <a class="top" href="#">Hồ sơ</a>
+                        <a href="#">Đăng xuất</a>
+                    </div>
+                </div>
+                <img src="https://api-private.atlassian.com/users/5e315f6f6bd5c40ca3959005/avatar?initials=public" alt="">
+            </div>
+        </div>
+    </div>
+</header>
+<script>     
+
+    // open noidung when click on button nut_dropdown
+     $('.tabs_small--type').click(function() {
+        $('.noidung_dropdown').toggleClass('hienThi');
+     }); 
+     $('.noidung_dropdown').click(function(e) {
+        e.stopPropagation()
+     });
+     $('#search-res').load('Search_page.html');
+
+     $('.container_search').click(function() {
+        var width = $(window).width();
+        if (width <= 460)
+            $('#search-res').toggleClass("hienThi");
+     })
+     $(window).resize(function() {
+        $('#search-res').removeClass("hienThi");
+    });
+    $('#search-res').click(function(e) {
+        e.stopPropagation();
+    })
+</script>
