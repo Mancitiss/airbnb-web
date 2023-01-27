@@ -450,12 +450,9 @@ img {
 .cam-nang img{
         width: 350px;
         height: 200px;
-        margin: 15px auto; 
         border-radius: 5px;    
 }
-.cam-nang {
-      padding: 50px;
-}
+
 .slick-arrow{
         position: absolute;
         top: 40%;
