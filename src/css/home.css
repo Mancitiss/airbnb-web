@@ -4,7 +4,7 @@
 }
 
 .place {
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .information__place {
@@ -79,6 +79,9 @@
     justify-content: space-between;
     align-items: center;
 }
+.toast__body--favo a {
+    font-size: 1.4rem;
+}
 .btn__close--toast {
     outline: none;
     border: none;
@@ -143,6 +146,7 @@
 .show {
     display: block;
 }
+
 @media (max-width: 595px) {
     .filter__arrange {
         margin-top: 90px;

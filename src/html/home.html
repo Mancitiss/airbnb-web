@@ -29,125 +29,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 </head>
 <body>
-    <header class="header--pc">
-        <div class="header">
-            <div class="logo" >
-                <img src="../img/Logo (màu).png" alt="logo"  style="width: 100px; height: 70px;">
-            </div>
-
-            <!-- SEARCH TAB -->
-            <div class="container_search">
-                <div class="tabs_search">
-                    <div class="tabs_small">
-                        <span class="tab_search tab_search--res" for="">Địa điểm <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span>
-
-                        <input type="text" class="text_place" placeholder="Nhập tên tỉnh thành" />
-                    </div>
-
-                    <div class="tabs_small">
-                        <span class="tab_search tab_search--sm" for="">Nhận <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span>
-
-                        <input type="date" class="text_place" placeholder="dd/mm/yyyy" style="color:gray;"/>
-                    </div>
-
-                    <div class="tabs_small">
-                        <span class="tab_search tab_search--sm" for="">Trả <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span> 
-
-                        <input type="date" class="text_place" placeholder="dd/mm/yyyy" style="color:gray;"/>
-                    </div>
-                    
-                    <div class="tabs_small tabs_small--type">
-                        <label class="tab_search tab_search--sm">
-                            <span class="tab_search tab_search--sm">Loại</span>
-
-                                    <i class="fa-solid fa-chevron-down icon_search"></i>
-                        </label>
-                            
-                        <div class="noidung_dropdown">
-                            <table>
-                                <thead style="text-align: center; font-weight: 600; color: #dcbdb8;">
-                                    <td>Loại phòng</td>
-                                    <td>Số lượng</td>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1-2 người</td>
-                                        <td style="display: flex; width: 5px;">
-                                            <button class="btn_decrease" onclick="stepper(this)">-</button>
-                                            <input type="number" name="numberupdown" id="amount_guess1" min="0" max="10" step="1" value="2"
-                                                readonly>
-                                            <button class="btn_increase" onclick="stepper(this)">+</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3-4 người</td>
-                                        <td style="display: flex; width: 5px;">
-                                            <button class="btn_decrease" onclick="stepper(this)">-</button>
-                                            <input type="number" name="numberupdown" id="amount_guess2" min="0" max="10" step="1" value="2"
-                                                readonly>
-                                            <button class="btn_increase" onclick="stepper(this)">+</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5-6 người</td>
-                                        <td style="display: flex; width: 5px;">
-                                            <button class="btn_decrease" onclick="stepper(this)">-</button>
-                                            <input type="number" name="numberupdown" id="amount_guess3" min="0" max="10" step="1" value="2"
-                                                readonly>
-                                            <button class="btn_increase" onclick="stepper(this)">+</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>7-8 người</td>
-                                        <td style="display: flex; width: 5px;">
-                                            <button class="btn_decrease" onclick="stepper(this)">-</button>
-                                            <input type="number" name="numberupdown" id="amount_guess4" min="0" max="10" step="1" value="2"
-                                                readonly>
-                                            <button class="btn_increase" onclick="stepper(this)">+</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>9-10 người</td>
-                                        <td style="display: flex; width: 5px;">
-                                            <button class="btn_decrease" onclick="stepper(this)">-</button>
-                                            <input type="number" name="numberupdown" id="amount_guess5" min="0" max="10" step="1" value="2"
-                                                readonly>
-                                            <button class="btn_increase" onclick="stepper(this)">+</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>                        
-                    </div>
-                    <input type="text" placeholder="Tìm kiếm" id="input-search"/>
-                    <button class="search-web">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-
-                </div>
-                <div id="search-res"></div>
-            </div>
-            <!-- sliding tab -->
-            <!-- Split button -->
-            <div class="split-button">
-                <div class="border-btn">
-                    <div class="dropdown">
-                        <button class="btn">
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a class="top" href="#">Hộp thư</a>
-                            <a class="top" href="#">Chìa khóa</a>
-                            <a class="top" href="#" style="border-bottom: 1px solid rgb(184, 183, 183);">Yêu thích</a>
-                            <a class="top" href="#">Hồ sơ</a>
-                            <a href="#">Đăng xuất</a>
-                        </div>
-                    </div>
-                    <img src="https://api-private.atlassian.com/users/5e315f6f6bd5c40ca3959005/avatar?initials=public" alt="">
-                </div>
-            </div>
-        </div>
-    </header>
+    <div id="header"></div>
 
     <div class="filter__arrange">
         <div class="action action--filter">
@@ -472,54 +354,13 @@
     <!-- footer -->
     <div id="footer"></div>
     <!-- create navigation bottom -->
-    <div class="nav_bottom">
-        <div class="navigation">
-            <div class="nav_bar">
-                <div class="nav-item">
-                    <a href="#">
-                        <button>
-                            <i class="fa-solid fa-search icon_bottomnav"></i>
-                        </button>
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#">
-                        <button>
-                            <i class="fa-solid fa-heart icon_bottomnav"></i>
-                        </button>
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#">
-                        <button>
-                            <i class="fa-solid fa-key icon_bottomnav"></i>
-                        </button>
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#">
-                        <button>
-                            <i class="fa-solid fa-envelope icon_bottomnav"></i>
-                        </button>
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#">
-                        <button>
-                            <i class="fa-regular fa-user icon_bottomnav"></i>
-                        </button>
-                        
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>    
+    <div id="nav-bottom"></div> 
     
     <!-- toast favo -->
     <div class="toast toast-favo">
         <div class="toast-body toast__body--favo">
             <p class="content__toast"></p>
-            <button type="button" class="btn-close btn__close--toast" data-bs-dismiss="toast"></button>
+            <a href="./favorite.html" target="_blank">Xem</a>
         </div>
     </div>
 
@@ -534,33 +375,13 @@
 
 
     <script src="../js/button_type.js"></script>
-    <script>     
-
-        // open noidung when click on button nut_dropdown
-         $('.tabs_small--type').click(function() {
-            $('.noidung_dropdown').toggleClass('hienThi');
-         }); 
-         $('.noidung_dropdown').click(function(e) {
-            e.stopPropagation()
-         });
-         $('#search-res').load('Search_page.html');
-
-         $('.container_search').click(function() {
-            var width = $(window).width();
-            if (width <= 460)
-                $('#search-res').toggleClass("hienThi");
-         })
-         $(window).resize(function() {
-            $('#search-res').removeClass("hienThi");
-        });
-                $('#search-res').click(function(e) {
-                    e.stopPropagation();
-                })
-    </script>
+   
 
     <script>
         $(document).ready(function() {
             $("#footer").load("./footer.html");
+            $("#header").load('./header.html');
+            $("#nav-bottom").load('./footer-mobile.html');
 
             // heart action
             $('.heart__place--empty').mouseup(function() {
@@ -572,7 +393,7 @@
                 $('.content__toast').text("Đã thêm vào danh sách yêu thích");
                 setTimeout(function() { 
                     $('.toast-favo').css("display","none");
-                }, 2000);
+                }, 4000);
             });
             $('.heart__place--filled').mouseup(function() {
                 $(this).toggleClass('visible');
@@ -583,7 +404,7 @@
                 $('.content__toast').text("Đã xóa khỏi danh sách yêu thích");
                 setTimeout(function() { 
                     $('.toast-favo').css("display","none");
-                }, 2000);
+                }, 4000);
             });
         
             //filter action

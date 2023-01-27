@@ -69,6 +69,10 @@ h2, h3, h4, h5 {
     justify-content: space-between;
     align-items: center;
 }
+.toast__body--favo a {
+    text-decoration: underline;
+    font-size: 1.4rem;
+}
 .btn__close--toast {
     outline: none;
     border: none;
@@ -78,6 +82,23 @@ h2, h3, h4, h5 {
     padding-left: 10px;
     font-size: 1.4rem;
     margin-bottom: 0;
+}
+/*-------------- TOAST MOBILE -------------*/
+.alert-success--favo {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 78%;
+    transform: translate(-50%, -78%);
+    margin: auto;
+    max-width: 280px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+    color: white;
+}
+.content__toast--mobile {
+    white-space: nowrap;
 }
 
 /* --------------------GALLERY--------------------- */
