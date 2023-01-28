@@ -93,6 +93,7 @@
         bottom: 0;
     }
     .footer__container {
+        position: relative;
         height: 120px;
         padding: 15px;
         box-shadow: 0px -5px 20px #ccc;
@@ -109,6 +110,42 @@
         margin-top: 0;
         padding-left: 20px;
         padding-right: 20px;
+    }
+    .choose__type {
+        position: absolute;
+        bottom: 100%;
+        width: 100%;
+        background: var(--main-color);
+    }
+    .table__room--respon th, .table__room--respon td {
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        text-align: center;
+    }
+    .table__room--respon th {
+        padding-top: 10px;
+    }
+    .icon__adjust {
+        color: white !important;
+        border-color: white !important;
+    }
+    .btn--bookroom {
+        background: red;
+        color: white;
+        float: right;
+        border: 1px solid white;
+        padding: 10px 50px;
+        margin: 10px;
+        border-radius: 20px;
+    }
+    .btn--later {
+        background: green;
+        color: white;
+        float: right;
+        border: 1px solid white;
+        padding: 10px 50px;
+        margin: 10px;
+        border-radius: 20px;
     }
 }
 @media only screen and (max-width: 610px) {
