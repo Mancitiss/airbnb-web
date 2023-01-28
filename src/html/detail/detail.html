@@ -738,7 +738,7 @@
                                 <i class="ti-angle-down icon__drop"></i>
         
                             </div>
-                            <div class="sub__cell">
+                            <div class="sub__cell sub__cell--pc">
                                 <table cellspacing="0" class="table__room">
                               
                                         <th>Loại phòng</th>
@@ -902,7 +902,78 @@
                 <span>&nbsp&nbsp &#x268A; &nbsp&nbsp</span>
                 <input type="date" class="date" value="2023-01-20" style="margin-right: 30px; font-size: 1.4rem;">
             </div>
-            <button type="button" class="btn btn__morerv btn__choose btn__choose--mobile">Chọn phòng</button>
+                <button type="button" class="btn btn__morerv btn__choose btn__choose--mobile">Chọn loại phòng</button>
+            </div>
+
+            <div class="choose__type">
+                <table cellspacing="0" class="table__room table__room--respon">
+                        <th>Loại phòng</th>
+                        <th>Số lượng</th>
+                        <th>Giá / đêm</th>
+                        <th>Còn</th>
+                        <tr>
+                            <td>1 - 2 người</td>
+                            <td>
+                                <div>
+                                    <i class="ti-minus icon icon__adjust icon__adjust--minus"></i>
+                                    <span>0</span>
+                                    <i class="ti-plus icon icon__adjust icon__adjust--plus"></i>
+                                </div>
+                            </td>
+                            <td>2.190.000 VND</td>
+                            <td><span class="left">10</span><span>&nbspphòng</span></td>
+                        </tr>
+                        <tr>
+                            <td>3 - 4 người</td>
+                            <td>
+                                <div>
+                                    <i class="ti-minus icon icon__adjust icon__adjust--minus"></i>
+                                    <span>0</span>
+                                    <i class="ti-plus icon icon__adjust icon__adjust--plus"></i>
+                                </div>
+                            </td>
+                            <td>2.800.000 VND</td>
+                            <td><span class="left">0</span> <span>&nbspphòng</span></td>
+                        </tr>
+                        <tr>
+                            <td>5 - 6 người</td>
+                            <td>
+                                <div>
+                                    <i class="ti-minus icon icon__adjust icon__adjust--minus"></i>
+                                    <span>0</span>
+                                    <i class="ti-plus icon icon__adjust icon__adjust--plus"></i>
+                                </div>
+                            </td>
+                            <td>3.400.000 VND</td>
+                            <td><span class="left">2</span> <span>&nbspphòng</span></td>
+                        </tr>
+                        <tr>
+                            <td>7 - 8 người</td>
+                            <td>
+                                <div>
+                                    <i class="ti-minus icon icon__adjust icon__adjust--minus"></i>
+                                    <span>0</span>
+                                    <i class="ti-plus icon icon__adjust icon__adjust--plus"></i>
+                                </div>
+                            </td>
+                            <td>4.000.000 VND</td>
+                            <td><span class="left">7</span> <span>&nbspphòng</span></td>
+                        </tr>
+                        <tr>
+                            <td style="border: none">9 - 10 người</td>
+                            <td style="border: none">
+                                <div>
+                                    <i class="ti-minus icon icon__adjust icon__adjust--minus"></i>
+                                    <span>0</span>
+                                    <i class="ti-plus icon icon__adjust icon__adjust--plus"></i>
+                                </div>
+                            </td>
+                            <td style="border: none">4.500.000 VND</td>
+                            <td style="border: none"><span class="left">15</span> <span>&nbspphòng</span></td>
+                        </tr>
+                </table>
+                <button class="btn--bookroom">Đặt phòng &nbsp &#10095;</button>
+                <button class="btn--later">Chọn sau &nbsp &#10006;</button>
             </div>
         </div>
     </footer>
@@ -931,9 +1002,16 @@
         $(document).ready(function() {
             // ------EVENT RESERVATION BOX-----
             $('.cell--room').click(function() {
-                $('.sub__cell').toggleClass("show__block");
+                $('.sub__cell--pc').toggleClass("show__block");
                 $('.icon__drop').toggleClass("rotate");
             });
+            // open reservation box mobile
+            $('.btn__choose--mobile').click(function() {
+                $('.choose__type').addClass("show__block");
+            })
+            $('.btn--later').click(function() {
+                $('.choose__type').removeClass("show__block");
+            })
             // stopPropagation
             $('.sub__cell').click(function(e) {
                 e.stopPropagation();
@@ -1074,6 +1152,8 @@
                     $('.alert-success--favo').css("display","none");;
                 }, 3000);
             });
+        
+            
         });
     </script>
     <script>
