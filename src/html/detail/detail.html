@@ -162,8 +162,62 @@
             </div> 
         </div>
     </header>
-    <!-- Resposive -->
-    <div id="gallery__res"></div>
+
+    <!-- Resposive gallery -->
+    <div class="gallery__detail gallery__detail--respon">
+		<div id="slider--respon" class="carousel carousel--respon" data-ride="carousel" data-interval="false">
+	
+			<!-------slider------>
+			<div class="carousel-inner carousel-inner--respon ">
+			</div>
+		
+			<!-- Left and right controls -->
+			<a class="left carousel-control" href="#slider--respon" data-slide="prev">
+				<i class="ti-angle-left icon__control"></i>
+			</a>
+			<a class="right carousel-control carousel-control--right" href="#slider--respon" data-slide="next">
+				<i class="ti-angle-right icon__control"></i>
+			</a>
+	
+			<!-----bottom thumbanails----->
+			<div class="owl-carousel owl-theme owl-loaded thumbnail--respon">
+				<div class="owl-stage-outer owl-stage-outer--respon">
+					<div class="owl-stage owl-stage--respon">				
+					</div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+    <!----------- MODAL IMGS  ----------->
+    <div id="modal__img" class="gallery__detail slider__fullwidth">
+		<div id="slider" class="carousel" data-ride="carousel" data-interval="false">
+	
+			<!-------slider------>
+			<div class="carousel-inner carousel-inner--modal">
+			</div>
+		
+			<!-- Left and right controls -->
+			<a class="left carousel-control" href="#slider" data-slide="prev">
+				<i class="ti-angle-left icon__control"></i>
+			</a>
+			<a class="right carousel-control carousel-control--right" href="#slider" data-slide="next">
+				<i class="ti-angle-right icon__control"></i>
+			</a>
+	
+			<!-----bottom thumbanails----->
+			<div class="owl-carousel owl-theme owl-loaded thumbnail--modal">
+				<div class="owl-stage-outer owl-stage-outer--modal">
+					<div class="owl-stage owl-stage--modal">				
+					</div>
+				</div>
+			</div>
+	
+		</div>
+		<button type="button" class="close close__modal--img">&times;</button>
+	</div>
+    <!-------- after title --------->
     <div class="grid body">
         <!-------------head------------------>
         <div class="head__title">
@@ -854,9 +908,7 @@
     </footer>
     <!--------------END MOBILE---------------->
     
-    <!----------- MODAL IMGS  ----------->
-    <div id="listimg" ></div>
-
+    
     <!---------- TOAST FAVO ---------->
     <div class="toast toast-favo">
         <div class="toast-body toast__body--favo">
@@ -1000,7 +1052,7 @@
 
             // see more images
             $('.overlay__moreimg').click(function() {
-                $('#listimg').css("display","block");
+                $('#modal__img').css("display","block");
             });
 
             // toast favo mobile
@@ -1026,9 +1078,99 @@
     </script>
     <script>
         $(document).ready(function() {
-            $("#listimg").load("gallery_modal.html");
-            $("#gallery__res").load("gallery.html");
+            // $("#listimg").load("gallery_modal.html");
             $("#footer").load("../footer.html");
+
+            galleryImage = [
+				'https://a0.muscache.com/im/pictures/miso/Hosting-639439314907086295/original/3b3c6298-bf4d-49a6-bd93-205e1b99fee9.jpeg?im_w=1200',
+				'https://a0.muscache.com/im/pictures/cf4f406e-4dd3-4977-bc5d-2690fb6154f5.jpg?im_w=720',
+				'https://a0.muscache.com/im/pictures/9e96aa88-cbfb-4e63-9f1b-69b0254a7561.jpg?im_w=1200',
+				'https://a0.muscache.com/im/pictures/c69235e2-5cd4-48ab-860d-49aca384d89d.jpg?im_w=720',
+				'https://a0.muscache.com/im/pictures/b62b4933-caab-43b0-adb2-9519c174d4d8.jpg?im_w=1200',
+				'https://a0.muscache.com/im/pictures/miso/Hosting-639439314907086295/original/75430e48-27c1-4ef5-b397-778a418087cc.jpeg?im_w=720',
+				'https://a0.muscache.com/im/pictures/4eb587b0-a31f-48ae-a2ff-ec739cdfa967.jpg?im_w=720',
+				'https://a0.muscache.com/im/pictures/d001c1bb-588e-427a-8c30-a406c190a8ba.jpg?im_w=720',
+				'https://a0.muscache.com/im/pictures/609ca79b-0f30-4a1b-9a95-524d6bc7f259.jpg?im_w=1200',
+				'https://a0.muscache.com/im/pictures/5349d3d9-949b-4cee-9888-a60feaf7f693.jpg?im_w=720',
+				'https://a0.muscache.com/im/pictures/9c82e4cd-8798-4bcd-bb87-64f2ebf2533c.jpg?im_w=720',
+				'https://a0.muscache.com/im/pictures/miso/Hosting-639439314907086295/original/fad3a3e2-91e1-4cac-9979-6d88eaecd68e.jpeg?im_w=1200',
+				'https://a0.muscache.com/im/pictures/91661b5f-c032-4f4a-8777-d0792589fb87.jpg?im_w=720',
+				'https://a0.muscache.com/im/pictures/bc96590e-016a-4a80-b74b-f01e608f73c8.jpg?im_w=720',
+				'https://a0.muscache.com/im/pictures/miso/Hosting-639439314907086295/original/8b7d531d-a926-4a7e-a77b-13ef6f7ee4e2.jpeg?im_w=720',
+				'https://a0.muscache.com/im/pictures/afa2f1cf-8d14-4ef0-856f-f73a2f989b2e.jpg?im_w=720',
+				'https://a0.muscache.com/im/pictures/560643c8-f5b5-4cac-bb65-df7b4972524d.jpg?im_w=720',
+				'https://a0.muscache.com/im/pictures/4a1e01c3-14b4-43ab-82e3-daba5465a8a8.jpg?im_w=720',
+				'https://a0.muscache.com/im/pictures/c87602c5-6f35-48de-977b-423f2bbad8f7.jpg?im_w=720',
+				'https://a0.muscache.com/im/pictures/f6367594-2957-4502-aa4a-c555d80a778a.jpg?im_w=1200',
+			];
+			
+			slideRespon = "<div class='item item--respon'>" + "<img class='slider__img slider__img--respon' alt='hinh-anh-khach-san'>" + "</div>";
+			thumbnailRespon = "<div class='owl-item'><img class='thumbnail__img thumbnail__img--respon' alt='hinh-anh-khach-san'></div>";
+
+            slideModal = "<div class='item item--modal'>" + "<img class='slider__img' alt='hinh-anh-khach-san'>" + "</div>";
+		    thumbnailModal = "<div class='owl-item owl-item--modal'><img class='thumbnail__img' alt='hinh-anh-khach-san'></div>"
+			i = 0;
+			// set url for all images
+			function setImgs(selector, item, index) {
+				selector.append(item);
+				current = selector.children().eq(i);
+				current.children().eq(0).attr('src', galleryImage[i]);
+			}
+
+			while (i <galleryImage.length) {
+				setImgs($('.carousel-inner--respon'), slideRespon, i);
+				setImgs($('.owl-stage--respon'), thumbnailRespon, i);
+                setImgs($('.carousel-inner--modal'), slideModal, i);
+				setImgs($('.owl-stage--modal'), thumbnailModal, i);
+				i++;
+			}
+			
+            // first image will show
+            $('.item--respon:first-child').addClass('active');
+		    $('.item--modal:first-child').addClass('active');
+	
+			// event when click a item -> direct to same image in slider
+            function compareUrl(selector, url) {
+                if (selector.children().eq(0).attr('src') === url) 
+                    selector.addClass('active');
+            }
+           
+			$('.thumbnail--respon img').click(function () {
+                url = $(this).attr('src');
+                $('.item--respon').each(function() {
+                    if ($(this).hasClass('active') && url !== $(this).children().attr('src')) {
+                        $(this).removeClass('active');
+                        $('.item--respon').each(function(){
+                            compareUrl($(this), url);
+                        });
+                    }
+                });
+            }); 
+			
+            $('.thumbnail--modal img').click(function() {
+                url = $(this).attr('src');
+                $('.item--modal').each(function() {
+                    if ($(this).hasClass('active') && url !== $(this).children().attr('src')) {
+                        $(this).removeClass('active');
+                        $('.item--modal').each(function(){
+                            compareUrl($(this), url);
+                        });
+                    }
+                });
+            });
+
+            // run owl carousel in thumbnail
+			$(".owl-carousel").owlCarousel({
+				loop: false,
+				items: 8,
+			});
+		
+		 
+            // close gallery modal
+            $('.close__modal--img').click(function() {
+                    $('#modal__img').css("display","none");
+            });
+	
         });
     </script>
     <!---------- OWL CAROUSEL ------------>
