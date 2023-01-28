@@ -102,7 +102,7 @@ h2, h3, h4, h5 {
 }
 
 /* --------------------GALLERY--------------------- */
-#gallery__res {
+.gallery__detail--respon {
     height: 500px;
     /* width: 100vw; */
     display: none;
@@ -180,7 +180,7 @@ h2, h3, h4, h5 {
     background: rgba(0, 0, 0, 0.3);
 }
 /*---------------see more imgs -------------- */
-#listimg {
+#modal__img {
     display: none;
 }
 /* ------------ modal intro --------------*/

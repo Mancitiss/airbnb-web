@@ -17,7 +17,7 @@
     .head__title h3{
         font-size: 23px;
     }
-    #gallery__res {
+    .gallery__detail--respon {
         height: 480px;
         display: block;
     }
@@ -115,7 +115,7 @@
     .head__title {
         transform: translateY(-20px);
     }
-    #gallery__res {
+    .gallery__detail--respon {
         height: 420px;
     }
     .des__re {
