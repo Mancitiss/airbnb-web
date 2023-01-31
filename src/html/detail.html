@@ -43,126 +43,8 @@
 </head>
 <body>
     <!-----------------ALL DEVICES--------------->
-    <header class="header--pc">
-        <div class="header">
-            <div class="logo" >
-                <a href="./home.html" target="_blank">
-                    <img src="../img/Logo (màu).png" alt="logo"  style="width: 100px; height: 70px;">
-                </a>
-            </div>
-
-            <!-- SEARCH TAB -->
-            <div class="container_search">
-                <div class="tabs_search">
-                    <div class="tabs_small">
-                        <span class="tab_search" for="">Địa điểm <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span>
-                        <input type="text" class="text_place" placeholder="Nhập tên tỉnh thành" />
-                    </div>
-
-                    <div class="tabs_small">
-                        <span class="tab_search" for="">Nhận <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span>
-                        <input type="date" class="text_place" placeholder="dd/mm/yyyy" style="color:gray;"/>
-                    </div>
-
-                    <div class="tabs_small">
-                        <span class="tab_search" for="" onclick="openCity(event, 'check_out')">Trả <i class="fa-solid fa-chevron-down icon_search icon_search--down"></i></span> 
-                        <input type="date" class="text_place" placeholder="dd/mm/yyyy" style="color:gray;"/>
-                    </div>
-                    
-                    <div class="tabs_small tabs_small--type">
-                        <label class="tab_search">
-                            <span class="tab_search">Loại</span>
-                                    <i class="fa-solid fa-chevron-down icon_search"></i>
-                        </label>
-                            
-                        <div class="noidung_dropdown">
-                            <table>
-                                <thead style="text-align: center; font-weight: 600; color: #dcbdb8;">
-                                    <td>Loại phòng</td>
-                                    <td>Số lượng</td>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1-2 người</td>
-                                        <td style="display: flex; width: 5px;">
-                                            <button class="btn_decrease" onclick="stepper(this)">-</button>
-                                            <input type="number" name="numberupdown" id="amount_guess1" min="0" max="10" step="1" value="2"
-                                                readonly>
-                                            <button class="btn_increase" onclick="stepper(this)">+</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3-4 người</td>
-                                        <td style="display: flex; width: 5px;">
-                                            <button class="btn_decrease" onclick="stepper(this)">-</button>
-                                            <input type="number" name="numberupdown" id="amount_guess2" min="0" max="10" step="1" value="2"
-                                                readonly>
-                                            <button class="btn_increase" onclick="stepper(this)">+</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5-6 người</td>
-                                        <td style="display: flex; width: 5px;">
-                                            <button class="btn_decrease" onclick="stepper(this)">-</button>
-                                            <input type="number" name="numberupdown" id="amount_guess3" min="0" max="10" step="1" value="2"
-                                                readonly>
-                                            <button class="btn_increase" onclick="stepper(this)">+</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>7-8 người</td>
-                                        <td style="display: flex; width: 5px;">
-                                            <button class="btn_decrease" onclick="stepper(this)">-</button>
-                                            <input type="number" name="numberupdown" id="amount_guess4" min="0" max="10" step="1" value="2"
-                                                readonly>
-                                            <button class="btn_increase" onclick="stepper(this)">+</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>9-10 người</td>
-                                        <td style="display: flex; width: 5px;">
-                                            <button class="btn_decrease" onclick="stepper(this)">-</button>
-                                            <input type="number" name="numberupdown" id="amount_guess5" min="0" max="10" step="1" value="2"
-                                                readonly>
-                                            <button class="btn_increase" onclick="stepper(this)">+</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>                        
-                    </div>
-                    
-                    <input type="text" placeholder="Tìm kiếm" id="input-search"/>
-                    <button class="search-web" onclick="location.href='../home.html'">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-
-                </div>
-            </div>
-
-            <!-- sliding tab -->
-    
-            <!-- Split button -->
-            <div class="split-button">
-                <div class="border-btn">
-                    <div class="dropdown">
-                        <button class="btn">
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a class="top" href="#">Hộp thư</a>
-                            <a class="top" href="#">Chìa khóa</a>
-                            <a class="top" href="../favorite.html" style="border-bottom: 1px solid rgb(184, 183, 183);">Yêu thích</a>
-                            <a class="top" href="#">Hồ sơ</a>
-                            <a href="#">Đăng xuất</a>
-                        </div>
-                    </div>
-                    <img src="https://api-private.atlassian.com/users/5e315f6f6bd5c40ca3959005/avatar?initials=public" alt="">
-                </div>
-            </div> 
-        </div>
-    </header>
-
+    <div id="header"></div>
+   
     <!-- Resposive gallery -->
     <div class="gallery__detail gallery__detail--respon">
 		<div id="slider--respon" class="carousel carousel--respon" data-ride="carousel" data-interval="false">
@@ -873,69 +755,7 @@
         </div>
     </div>
 
-    <footer class="site-footer">
-        <div class="container-footer">
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <img src="../img/Logo (trắng).png" alt="">
-                    <h6 class="text-justify">Đối tác thanh toán</h6>
-                    <img class="partner_logo" src="../img/visa.png" alt="payment-method">
-                    <img class="partner_logo" src="../img/mastercard.png" alt=payment-method">
-                    <img class="partner_logo" src="../img/paypal.png" alt="payment-method">
-                    <img class="partner_logo" src="../img/momo.png" alt="payment-method">
-                    <img class="partner_logo" src="../img/zalopay.jpg" alt="payment-method">
-                    <img class="partner_logo" src="../img/vcb.png" alt="payment-method">
-                    <img class="partner_logo" src="../img/bsmart.jpg" alt="payment-method">
-                    <img class="partner_logo" src="../img/ministop.png" alt="payment-method">
-                    <img class="partner_logo" src="../img/circlek.jpg" alt="payment-method">
-    
-                </div>
-    
-                <div class="col-xs-6 col-md-3">
-                    <h6>Về HaloHalo</h6>
-                    <ul class="footer-links">
-                        <li><a href="#">Cách đặt chỗ</a></li>
-                        <li><a href="#">Liên hệ với chúng tôi</a></li>
-                        <li><a href="#">Tuyển dụng</a></li>
-                        <li><a href="#">Trợ giúp</a></li>
-                        <li><a href="#">Giới thiệu</a></li>
-                    </ul>
-                    <h6>Theo dõi HaloHalo tại</h6>
-                    <ul class="footer-links">
-                        <li><i class="fa-brands fa-twitter"></i><a href="#">Twitter</a></li>
-                        <li><i class="fa-brands fa-facebook"></i><a href="#">Facebook</a></li>
-                        <li><i class="fa-brands fa-instagram"></i><a href="#">Instagram</a></li>
-                    </ul>
-                </div>
-    
-    
-                <div class="col-xs-6 col-md-3">
-                    <h6>Thông tin thêm</h6>
-                    <ul class="footer-links">
-                        <li><a href="#">Cẩm nang du lịch HaloHalo</a></li>
-                        <li><a href="#">Chính sách quyền riêng tư</a></li>
-                        <li><a href="#">Nội quy khi tham gia</a></li>
-                        <li><a href="#">Quy chuẩn thanh toán & đặt phòng</a></li>
-                        <li><a href="#">Đăng ký nơi nghỉ của bạn</a></li>
-                        <li><a href="#">Đăng ký doanh nghiệp hoạt động</a></li>
-                    </ul>
-                    <h6>Tải ứng dụng trên</h6>
-                    <ul class="footer-links">
-                        <li><i class="fa-brands fa-google-play"></i><a href="#">Google Play</a></li>
-                        <li><i class="fa-brands fa-app-store-ios"></i><a href="#">App Store</a></li>
-                </div>
-            </div>
-            <hr>
-        </div>
-        <div class="container-footer">
-            <div class="row">
-                <div class="col-md-8 col-sm-6 col-xs-12" style="margin: auto 40%; width: fit-content;">
-                    <p class="copyright-text" style="font-weight: bold;">Copyright &copy; 2023 by HaloHalo</p>
-                </div>
-            </div>
-        </div>
-    
-    </footer>
+    <div id="footer"></div>
     <!-----------------END DEVICES--------------->
 
     <!------------------MOBILE------------------->
@@ -1046,7 +866,7 @@
     <div class="toast toast-favo">
         <div class="toast-body toast__body--favo">
             <p class="content__toast"></p>
-            <a href="../favorite.html" target="_blank">Xem</a>
+            <a href="./favorite.html" target="_blank">Xem</a>
         </div>
     </div>
 
@@ -1209,7 +1029,10 @@
                     $('.alert-success--favo').css("display","none");;
                 }, 3000);
             });
-        
+            
+            // header + footer load
+            $('#header').load('./header.html');
+            $('#footer').load('./footer.html');
             
         });
     </script>
