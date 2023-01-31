@@ -17,10 +17,7 @@
     .head__title h3{
         font-size: 23px;
     }
-    .gallery__detail--respon {
-        height: 480px;
-        display: block;
-    }
+    
     .general__des {
         border-top: 2px solid #dddddd; 
     }
@@ -46,7 +43,7 @@
     }
     /* ---------location------- */
     .location {
-        padding-bottom: 100px;
+        padding-bottom: 50px;
     }
     .table__location {
         width: 100%;
@@ -152,9 +149,7 @@
     .head__title {
         transform: translateY(-20px);
     }
-    .gallery__detail--respon {
-        height: 420px;
-    }
+    
     .des__re {
         margin-top: 0px;
         margin-right: 0;
