@@ -1,7 +1,7 @@
 
-@media (max-width: 1024px) {
-    .infor__user {
-        margin-top: 20px;
+@media (min-width: 780px) {
+    .head__title {
+        margin-top: 100px;
     }
 }
 @media only screen and (max-width: 1070px) {
@@ -23,7 +23,7 @@
     }
     .task, .gallery,
     .galllery__col--2,
-    .reser__box, .header--pc, #footer {
+    .reser__box, #header {
         display: none !important;
     }
     .des__re {
