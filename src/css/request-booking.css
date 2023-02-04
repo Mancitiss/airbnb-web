@@ -1,0 +1,466 @@
+/* -------------CẤU HÌNH CHUNG-------------- */
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#content {
+    padding-left: 7rem;
+    margin-top: 7.5rem;
+    /* padding-top: 15.9rem;  */
+    width: 106.2rem;
+}
+
+#content td {
+    padding-left: 0;
+}
+
+#content h1 {
+    margin-bottom: 7rem;
+    color: var(--unnamed-color-000000);
+    text-align: left;
+    font: normal normal bold 5rem/6.7rem Segoe UI;
+    letter-spacing: 0rem;
+    color: #000000;
+    opacity: 1;
+}
+
+
+
+/* -------------HEADER-------------- */
+#header--pc {
+    padding: 2rem 4rem;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    border-bottom: 0.1rem solid rgb(184, 183, 183);
+    background-color: white;
+    z-index: 10;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 6rem;
+}
+
+/* -------------CONTENT-------------- */
+hr {
+    float: left;
+    width: 75.2rem;
+    border: 0.1rem solid #D6BEB9;
+    opacity: 0.5;
+}
+
+/* CHUYẾN ĐI CỦA BẠN */
+#cdcb p {
+    margin-bottom: 2rem;
+    color: var(--unnamed-color-000000);
+    text-align: left;
+    font: normal normal bold 3rem/4rem Segoe UI;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+}
+
+#cdcb td {
+	padding-right: 20rem;
+    padding-bottom: 2rem;
+    color: var(--unnamed-color-000000);
+    text-align: left;
+    font: normal normal normal 2.2rem/3rem Segoe UI;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+}
+
+#cdcb table {
+	padding-bottom: 5rem;
+}
+
+/* THANH TOÁN */
+#tt {
+    width: 75.2rem;
+}
+
+#tt h4, #csh h4 {
+	padding-top: 7rem;
+}
+
+#tt h4 {
+	margin-bottom: 3rem;
+    color: var(--unnamed-color-000000);
+    text-align: left;
+    font: normal normal bold 3rem/4rem Segoe UI;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+}
+
+#thetindung {
+    display: inline-block;
+    width: 70.4rem;
+    height: 7.7rem;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    border: 0.2rem solid var(--unnamed-color-a38f8b);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 0.2rem solid #A38F8B;
+    border-radius: 1.8rem;
+    opacity: 1;
+}
+
+#thetindung p {
+    line-height: 7.4rem;
+    padding-left: 3.2rem;
+}
+
+.down-icon {
+    float: right;
+    padding-right: 2.8rem;
+    line-height: 7.4rem;
+}
+
+#sothe table {
+    width: 70.4rem;
+    height: 14.2rem;
+    margin-top: 2rem;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    border: 0.1rem solid var(--unnamed-color-d6beb9);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 0.1rem solid #D6BEB9;
+    border-radius: 1.8rem;
+    opacity: 1;
+    border-collapse: collapse;  
+}
+
+#sothe td {
+    border: 0.1rem solid var(--unnamed-color-d6beb9);
+    border: 0.1rem solid #D6BEB9;
+    border-radius: 1.8rem;
+    opacity: 1;
+    padding-left: 3.2rem;
+}
+
+#sothe p {
+    color: var(--unnamed-color-000000);
+    letter-spacing: 0rem;
+    color: #000000;
+    opacity: 0.5;
+}
+
+#mabuuchinh, #khuvuc {
+    display: block;
+    width: 70.4rem;
+    height: 7.7rem;
+    margin-top: 2rem;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    border: 0.1rem solid var(--unnamed-color-d6beb9);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 0.1rem solid #D6BEB9;
+    border-radius: 1.8rem;
+    opacity: 1;
+}
+
+#mabuuchinh p {
+    line-height: 7.4rem;
+    padding-left: 3.2rem;
+    opacity: 0.5;
+}
+
+#khuvuc p {
+    padding-left: 3.2rem;
+    opacity: 0.5;
+}
+
+#khuvuc b {
+    font-size: 2.6rem;
+}
+
+.down-icon2 {
+    float: right;
+    padding-right: 2.8rem;
+    /* line-height: 7.4rem; */
+}
+
+#magiamgia {
+    padding-top: 2.0rem;
+    float: right;
+    padding-bottom: 7.0rem;
+}
+
+/* BẮT BUỘC */
+#bb {
+    width: 75.2rem;
+}
+
+#bb h4 {
+    margin-top: 20.4rem;
+    margin-bottom: 2rem;
+    color: var(--unnamed-color-000000);
+    text-align: left;
+    font: normal normal bold 3rem/4rem Segoe UI;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+} 
+#bb table {
+	padding-bottom: 5rem;
+    width: 100%;
+}
+
+#bb td {
+    width: 31.1rem;
+    padding-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+#bb button {
+    float: right;
+}
+
+.btn-them {
+    display: block;
+    width: 8.5rem;
+    height: 4rem;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    border: 0.1rem solid var(--unnamed-color-d6beb9);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 0.1rem solid #D6BEB9;
+    border-radius: 0.8rem;
+    opacity: 0.5;
+    color: #D6BEB9;
+}
+
+/* CHÍNH SÁCH HỦY */
+#csh h4 {
+    margin-bottom: 2rem;
+    color: var(--unnamed-color-000000);
+    text-align: left;
+    font: normal normal bold 3rem/4rem Segoe UI;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+}
+
+#csh td, #thongbao td {
+    display: block;
+    width: 52.3rem;
+    height: 6rem;
+}
+
+#csh #text {
+    margin-bottom: 2rem;
+    color: var(--unnamed-color-000000);
+    text-align: left;
+    font: normal normal normal 2.2rem/3rem Segoe UI;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+}
+
+#csh .underline, #thongbao .underline {
+    text-align: right;
+    width: 75.2rem;
+    margin-bottom: 7rem;
+    margin-top: 2rem;
+}
+
+/* THỜI GIAN ĐẶT PHÒNG */
+#tgdatphong {
+    display: inline-block;
+    padding-top: 7rem;
+}
+
+#tgdatphong #ttin {
+    margin-bottom: 7rem;
+    width: 53.6rem;
+    height: 14rem;
+    float: right;
+    margin-left: 4.9rem;
+    font-size: 2.6rem;
+    line-height: 2.9rem;
+}
+
+.dhc-icon {
+    line-height: 12rem;
+    font-size: 7.9rem;
+    color: #A38F8B;
+}
+
+/* THÔNG BÁO */
+#thongbao {
+    display: block;
+    padding-top: 7rem;
+} 
+
+#thongbao #chu {
+    color: var(--unnamed-color-000000);
+    text-align: left;
+    font: normal normal normal 2.2rem/3rem Segoe UI;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+}
+
+#btn-gyc {
+    display: block;
+    width: 35rem;
+    height: 5.6rem;
+    background: var(--unnamed-color-a38f8b) 0% 0% no-repeat padding-box;
+    background: #A38F8B 0% 0% no-repeat padding-box;
+    border-radius: 0.8rem;
+    border: 0rem;
+    opacity: 1;
+    color: white;
+}
+
+/* -------------BOX-------------- */
+.sticky-box {
+    position: absolute;
+    top: 296px;
+    left: 90rem;
+    width: 50.2rem;
+	height: 70.6rem;
+    border: 0.1rem solid #D6BEB9;
+    /* border-color: #D6BEB9; */
+    border-radius: 1rem;
+    padding: 4.6rem 3.2rem;
+    background: #fff;
+}
+
+#img {
+	display: inline-block;
+	top: 34.2rem;
+	left: 114.1rem;
+	width: 17rem;
+	height: 17rem;
+    background: transparent url('https://i.pinimg.com/564x/6c/88/6a/6c886a58955b62b80b29d29a69432904.jpg') 0% 0% no-repeat padding-box;
+	border-radius: 1.8rem;
+	opacity: 1;
+}
+
+#tieu-de {
+	top: 34.2rem;
+	left: 133.3rem;
+	width: 22rem;
+	height: 8rem;
+	/* UI Properties */
+	color: var(--unnamed-color-000000);
+	float: right;
+	font: normal normal normal 3rem/4rem Segoe UI;
+	letter-spacing: 0;
+	color: #000000;
+	opacity: 1;
+}
+
+#chi-tiet-gia {
+	margin-top: 3.5rem;
+    /* UI Properties */
+    color: var(--unnamed-color-000000);
+    text-align: left;
+    font: normal normal bold 3rem/4rem Segoe UI;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+}
+
+#bang-gia {
+	margin-top: 3.5rem;
+    width: 43.8rem;
+    height: 30rem;
+    padding: 4rem 2.2rem;
+    /* UI Properties */
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    border: 0.1rem solid var(--unnamed-color-d6beb9);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 0.1rem solid #D6BEB9;
+    border-radius: 1.8rem;
+    opacity: 0.5;
+}
+
+#bang-gia hr {
+	width: 100%;
+    border: 0.1rem solid #D6BEB9;
+    opacity: 0.5;
+    margin: 3.7rem 0 3.7rem 0;
+} 
+
+#hang-1 p, #hang-2 p, #hang-3 p {
+	display: inline-block;
+    /* line-height: 6rem; */
+}
+
+.cot-phai {
+	float: right;
+}
+
+#hang-3 p {
+	color: var(--unnamed-color-a38f8b);
+    font: normal normal bold 1.8rem/2.4rem Segoe UI;
+    letter-spacing: 0;
+    color: #A38F8B;
+    opacity: 1;
+}
+
+#them-ttin p {
+    margin-top: 1rem;
+	float: right;
+    color: var(--unnamed-color-000000);
+    text-decoration: underline;
+    font: normal normal normal 1.4rem/1.9rem Segoe UI;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+}
+
+/* -------------RESPONSIVE-------------- */
+/* mobie */
+@media only screen and (max-width:74rem) {
+    /* CHUNG */
+    html {
+        font-size: 0.4rem;
+    }
+    #content {
+        width: 100%;
+        padding: 0 2rem 0 2rem;
+        margin: 0;
+    }
+    #content hr {
+        width: 100%;
+    }
+
+    /* YCDP */
+    #tt, #bb, #csh, #tgdatphong, #thongbao {
+        width: 100%;
+    }
+    #thetindung, #sothe table, #mabuuchinh, #khuvuc {
+        width: 100%;
+    }
+    #csh table, #thongbao table {
+        width: 100%;
+    }
+    #csh .underline, #thongbao .underline {
+        width: 100%;
+    }
+    #tgdatphong {
+        display: flex;
+    }
+    #gyc-btn {
+        float: right;
+    }
+
+    /* BOX */
+    .sticky-box {
+        position:inherit;
+        border: none;
+        height: max-content;
+    }
+    #chi-tiet-gia, #gia, #them-ttin {
+        display: none;
+    }
+    #content-box #tieu-de {
+        width: 50%;
+        font-size: 4rem;
+    }
+}
